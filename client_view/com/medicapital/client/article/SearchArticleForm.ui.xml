@@ -1,0 +1,164 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:d="urn:import:com.google.gwt.user.datepicker.client">
+	<ui:style>
+	
+	.buttonSearch {
+			cursor: pointer;
+			margin-left: 3px;
+			width: 49px;
+			height: 18px;
+			background: url(Graphics/Button/search.png);
+			border: 0px;
+		}
+	
+		.inputSearchArea {
+			margin-top: -2px;
+			float: left;
+			width: 188px;
+			padding-left: 3px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			background: #FFF;
+			border: 1px solid #aaaaaa;
+			font-size: 12px;
+	</ui:style>
+	<g:HTMLPanel>
+
+		<table
+			style="padding-top:5px; width:959px; height:auto; border-top:1px dashed #dbdbdb"
+			cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<div class="letterTextNormal">
+						<b>Wyszukiwanie artykułów</b>
+						zawiera dane o Tobie, wprowadzone podczas rejestracji. Możesz
+						dowolnie edytować informacje o sobie - oprócz nazwy użytkownika
+						(Login). Pamiętaj że częściowy dostęp do Twoich danych, posiada
+						lekarz do którego zarejestrowałeś się na wizytę (zgodnie z
+						regulamine MediCapital ptk 33). Dlatego upewnij się że wprowadzone
+						przez Ciebie informacje są zgodne z rzeczywistością.
+						<br />
+						<b>Lekarz ma prawo anulować spotkanie, w przypadku kiedy dane są
+							nie prawdziwe.</b>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<table style="margin:15px 0px 15px 0px; width:959px; height:auto;"
+			cellpadding="0" cellspacing="0">
+			<tr>
+				<td
+					style="width:9px; height:9px; background:url(Graphics/cornerTopLeft.png)"></td>
+				<td style="width:937px; height:8px; border-top:1px solid #bebebe;"></td>
+				<td
+					style="width:9px; height:9px; background:url(Graphics/cornerTopRight.png)"></td>
+			</tr>
+			<tr>
+				<td colspan="3"
+					style="padding:5px 10px 0px 10px; border-left:1px solid #bebebe; border-right:1px solid #bebebe">
+					<div class="letterTextNormal">
+						<table style="width:937px; background:#f7f7f7" cellpadding="0"
+							cellspacing="0">
+							<tr>
+								<td style="width:312px;" valign="top" border="1">
+									<table style="width:292px" align="center" cellpadding="0"
+										cellspacing="6">
+										<tr>
+											<td colspan="2">
+												<div class="iconBirdBigBlue"></div>
+												<div class="letterTextBlue">Informacje podstawowe:</div>
+											</td>
+										</tr>
+										<tr>
+											<td style="width:100px; vertical-align:top">Imię:</td>
+											<td style="width:192px" align="center">
+												<g:TextBox ui:field="firstName" addStyleNames='{style.inputSearchArea}' />
+											</td>
+										</tr>
+										<tr>
+											<td style="vertical-align:top">Nazwisko:</td>
+											<td align="center">
+												<g:TextBox ui:field="lastName" addStyleNames='{style.inputSearchArea}' />
+											</td>
+										</tr>
+										<tr>
+											<td style="vertical-align:top">Wpisz frazę:</td>
+											<td align="center">
+												<g:TextBox ui:field="title" addStyleNames='{style.inputSearchArea}' />
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td style="width:1px; background:#dbdbdb"></td>
+								<td style="width:312px" valign="top">
+									<table style="width:292px" align="center" cellpadding="0"
+										cellspacing="6">
+										<tr>
+											<td colspan="2">
+												<div class="iconBirdBigBlue"></div>
+												<div class="letterTextBlue">Informacje dodatkowe:</div>
+											</td>
+										</tr>
+										<tr>
+											<td style="width:100px; vertical-align:top">Data od:</td>
+											<td style="width:192px" align="center">
+												<d:DateBox ui:field="createdFrom" addStyleNames='{style.inputSearchArea}'/>
+											</td>
+
+										</tr>
+										<tr>
+											<td style="vertical-align:top">Data do:</td>
+											<td align="center">
+												<d:DateBox ui:field="createdTo" addStyleNames='{style.inputSearchArea}'/>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2" align="right">
+												<g:Button ui:field="buttonSearch" addStyleNames='{style.buttonSearch}'></g:Button>
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td style="width:1px; background:#dbdbdb"></td>
+								<td style="width:311px" valign="top">
+									<table style="width:291px" valign="center" cellpadding="0"
+										cellspacing="6" border="0">
+										<tr>
+											<td>
+												<div class="helpPictures01"></div>
+												<div class="empty"
+													style="margin:-8px 0px 0px 0px; padding:5px; width:281px; border:1px solid #e1e1e1; background:#FFF">
+													<div class="empty"
+														style="padding:5px; width:269px; background:#e3e8f1; border:1px solid #c9d4e7">
+														<div class="letterTextHelp">
+															Aby zmienić swoje dane, najedź kursorem na
+															informację którą
+															chcesz zmienić i kliknij dwa razy.
+															Wybrane
+															pole zmieni się
+															na aktywne, umożliwiając
+															wprowadzenie
+															zmian.
+										 				</div>
+													</div>
+												</div>
+											</td>
+										</tr>							
+									</table>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="width:9px; height:9px; background:url(Graphics/cornerBottomLeft.png)"></td>
+				<td style="width:937px; height:8px; border-bottom:1px solid #bebebe;"></td>
+				<td
+					style="width:9px; height:9px; background:url(Graphics/cornerBottomRight.png)"></td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

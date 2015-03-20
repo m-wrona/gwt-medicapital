@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<dataset>
+	<user userId="1" login="testUser" password="testPassword"
+		firstName="firstName" lastName="lastName" eMail="address@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" />
+	<user userId="2" login="updatedUser" password="testPassword"
+		firstName="firstName" lastName="lastName" eMail="address@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" />
+	<user userId="3" login="deleteByLogin" password="testPassword"
+		firstName="firstName" lastName="lastName" eMail="address@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" />
+	<user userId="4" login="deleteById" password="testPassword"
+		firstName="firstName" lastName="lastName" eMail="address@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" />
+
+	<user userId="5" login="johnParker" password="testPassword"
+		firstName="John" lastName="Parker" eMail="john.parker@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" />
+	<user userId="6" login="johnJohn" password="testPassword"
+		firstName="John" lastName="John" eMail="john.john@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" />
+</dataset>

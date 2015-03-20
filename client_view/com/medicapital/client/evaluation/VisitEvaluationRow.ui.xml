@@ -1,0 +1,18 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:e='urn:import:com.medicapital.client.ui.generic'>
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Label>Stworzono:</g:Label>
+		<g:Label ui:field="created" />
+		<g:Label>Tytuł:</g:Label>
+		<g:Label ui:field="title" />
+		<g:Label>Ocena:</g:Label>
+		<e:RatingForm ui:field="evaluation" />
+		<g:Label>Opis:</g:Label>
+		<g:Label ui:field="description" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

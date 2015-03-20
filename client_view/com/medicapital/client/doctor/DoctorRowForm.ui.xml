@@ -1,0 +1,40 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<ui:style>		
+		.buttonDetails {
+			cursor: pointer;
+			width: 72px;
+			height: 12px;
+			background: url(Graphics/Button/details.png);
+			border: 0px;
+		}
+	</ui:style>
+
+	<g:HTMLPanel>
+		<div class="letterTextNormal">
+			<div class="cornerMiddleBigLeft" style="height:50px"></div>
+			
+			<div class="visitSeparator"></div>
+			<div class="visitCategory" style="width:194px">
+				<g:Label ui:field="firstName" />
+			</div>
+			<div class="visitSeparator"></div>
+			<div class="visitCategory" style="width:214px">
+				<g:Label ui:field="lastName" />
+			</div>
+			<div class="visitSeparator"></div>
+			<div class="visitCategory" style="width:184px">
+				<g:Label ui:field="evaluation" />
+			</div>
+			<div class="visitSeparator"></div>
+			<div class="visitCategory" style="width:93px">
+				<div class="emptyCenter" style="width:81px; margin-top:3px">
+					<g:PushButton ui:field="buttonDetails" addStyleNames='{style.buttonDetails}' />
+				</div>
+			</div>
+			
+			<div class="cornerMiddleBigRight" style="height:50px"></div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

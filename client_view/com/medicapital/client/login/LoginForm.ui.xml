@@ -1,0 +1,162 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<ui:style>
+		.buttonLog {
+			cursor: pointer;
+			margin-left: 5px;
+			width: 48px;
+			height: 12px;
+			background: url(Graphics/Login/buttonLog.png);
+			border: 0px;
+		}
+		
+		.buttonForgotPassword {
+			cursor: pointer;
+			margin-left: 12px;
+			margin-top: 4px;
+			width: 108px;
+			height: 9px;
+			background: url(Graphics/Login/buttonForgotPassword.png);
+			border: 0px;
+		}
+		
+		.buttonRegistration {
+			cursor: pointer;
+			margin-top: 2px;
+			margin-left: 12px;
+			width: 154px;
+			height: 9px;
+			background: url(Graphics/Login/buttonRegistration.png);
+			border: 0px;
+		}
+		
+		.inputLoginText {
+			float: left;
+			margin: auto;
+			min-width: 130px;
+			width: 130px;
+			height: 15px;
+			font-size: 0.70em;
+			font-weight: bold;
+			padding-left: 3px;
+			color: #6c9a08;
+			font-family: 'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif;
+			background-color: #FFFFFF;
+			border: 1px solid #9edf07;
+		}
+	</ui:style>
+
+	<g:HTMLPanel>
+		<table style="float:left; width:195px;" cellspacing="0"
+			cellpadding="0">
+			<tr>
+				<td style="width:55px">
+					<div class="iconStar"></div>
+					<div class="letterLogin"></div>
+				</td>
+				<td style="width:135px">
+					<g:TextBox ui:field="login" addStyleNames='{style.inputLoginText}' />
+				</td>
+			</tr>
+			<tr>
+				<td style="width:55px">
+					<div class="iconStar"></div>
+					<div class="letterPassword"></div>
+				</td>
+				<td style="width:135px">
+					<g:PasswordTextBox ui:field="password"
+						addStyleNames='{style.inputLoginText}' />
+				</td>
+			</tr>
+		</table>
+
+		<table style="float:left; magin-left:3px; width:82px; height:59px;"
+			cellspacing="0" cellpadding="0">
+			<tr>
+				<td>
+					<div class="picLoginOffline"></div>
+				</td>
+			</tr>
+		</table>
+		<div class="empty" style="margin-top:-7px">
+			<table style="clear:both;" cellpadding="0" cellspacing="0">
+				<tr>
+					<td style="width:120px">
+						<div class="iconStar"></div>
+						<g:PushButton ui:field="buttonForgotPassword"
+							addStyleNames='{style.buttonForgotPassword}' />
+					</td>
+					<td style="width:58px">
+						<g:PushButton ui:field="buttonLogin" addStyleNames='{style.buttonLog}' />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div class="iconStar"></div>
+						<g:PushButton ui:field="buttonRegister"
+							addStyleNames='{style.buttonRegistration}' />
+					</td>
+				</tr>
+			</table>
+		</div>
+		<g:HTMLPanel ui:field="validationWrongLoginData" visible='false'>
+			<table style="clear:both; width:7px; margin:10px 0px 0px 30px;"
+				cellpadding="0" cellspacing="0">
+				<tr>
+					<td style="height:6px">
+						<div class="picLoginCorner"></div>
+					</td>
+				</tr>
+			</table>
+			<table style="clear:both; margin-left:20px;" cellpadding="0"
+				cellspacing="0">
+				<tr>
+					<td style="width:7px;">
+						<div class="cornerLoginLeft"></div>
+					</td>
+					<td
+						style="height:20px; background: #FFF; border-top:1px solid #bebebe; border-bottom:1px solid #bebebe">
+						<div class="letterTextNormal">
+							<b>Podany login lub hasło są niepoprawne</b>
+						</div>
+					</td>
+					<td style="width:7px;">
+						<div class="cornerLoginRight"></div>
+					</td>
+				</tr>
+			</table>
+		</g:HTMLPanel>
+		<g:HTMLPanel ui:field="validationEmptyData" visible='false'>
+			<table style="clear:both; width:7px; margin:10px 0px 0px 30px;"
+				cellpadding="0" cellspacing="0">
+				<tr>
+					<td style="height:6px">
+						<div class="picLoginCorner"></div>
+					</td>
+				</tr>
+			</table>
+			<table style="clear:both; margin-left:20px;" cellpadding="0"
+				cellspacing="0">
+				<tr>
+					<td style="width:7px;">
+						<div class="cornerLoginLeft"></div>
+					</td>
+					<td
+						style="height:20px; background: #FFF; border-top:1px solid #bebebe; border-bottom:1px solid #bebebe">
+						<div class="letterTextNormal">
+							<b>Wpisz login lub hasło</b>
+						</div>
+					</td>
+					<td style="width:7px;">
+						<div class="cornerLoginRight"></div>
+					</td>
+				</tr>
+			</table>
+		</g:HTMLPanel>
+
+	</g:HTMLPanel>
+</ui:UiBinder>
+
+
+

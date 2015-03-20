@@ -1,0 +1,20 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<g:VerticalPanel>
+		<g:HTML>
+			 <div class="letterTitleBig">
+			 		<div class="iconBirdBigBlue"></div>Parę słów o MediCapital
+			 	 </div>
+			 	 
+			 	 <div class="letterTextNormal">	
+			 	 
+			 	 	<div class="empty" style="margin-top:13px; width:447px">
+			 	 		<div class="icon_1"></div> Nasz adres itd.<br/>
+			  	 	</div>
+			 	 	
+			 	 </div>
+
+		</g:HTML>
+	</g:VerticalPanel>
+</ui:UiBinder>

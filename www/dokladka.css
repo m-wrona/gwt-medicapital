@@ -1,0 +1,84 @@
+.picNews {position:relative; margin:auto; margin-left: 90px; float:left; width:275px; height:85px; z-index:2; background: url(Graphics/newsPictures01.png);}
+
+.picSlider1 {position:relative; margin:auto; margin-top:-6px; float:left; z-index:0; width:685px; height:270px; background: url(tap1a.png);}
+
+
+/* NOWE dla wrony */ 
+
+
+/* BUTTON */ 
+.buttonRate {
+cursor: pointer;
+float:right; 
+width:82px;
+height:18px;
+background-image: url(Graphics/Button/rate.png);
+border: 0px;
+}
+.buttonFirst {
+cursor: pointer;
+float:right; 
+width:61px;
+height:18px;
+background-image: url(Graphics/Button/first.png);
+border: 0px;
+}
+.buttonLast {
+cursor: pointer;
+float:right; 
+width:60px;
+height:18px;
+background-image: url(Graphics/Button/last.png);
+border: 0px;
+}
+.buttonOptions {
+cursor: pointer;
+float:right; 
+width:13px;
+height:13px;
+background-image: url(Graphics/Button/options.png);
+border: 0px;
+}
+
+
+/* PICTURES*/
+.strapVertical {margin:auto; width:1px; background: url(Graphics/strapVertical.png);}
+
+
+
+
+.foldDay { position:relative; margin:auto; float:left; width:95px; height:26px; background: url(Graphics/foldDay.png);}
+.foldWeek { position:relative; margin:auto; float:left; width:88px; height:26px; background: url(Graphics/foldWeek.png);}
+.foldMonth { position:relative; margin:auto; float:left; width:95px; height:26px; background: url(Graphics/foldMonth.png);}
+.foldDataAdressOffice { position:relative; margin:auto; margin-top:-6px; float:left; width:163px; height:18px; background: url(Graphics/foldDataAdressOffice.png);}
+.foldInformationAboutYou { position:relative; margin:auto; margin-top:-6px; float:left; width:130px; height:18px; background: url(Graphics/foldInformationAboutYou.png);}
+.foldDataLogin { position:relative; margin:auto; margin-top:-6px; float:left; width:136px; height:18px; background: url(Graphics/foldDataLogin.png);}
+.foldYourPictures { position:relative; margin:auto; margin-top:-6px; float:left; width:100px; height:18px; background: url(Graphics/foldYourPictures.png);}
+/* PICTURES*/
+
+
+
+/* ICON */
+.iconCrossBlue { margin:auto; margin:6px 7px 0px 2px; float: left; width:8px; height: 8px; background: url(Graphics/Icon/crossBig.png) #3399ff;}
+.iconCrossGreen { margin:auto;  margin:6px 5px 0px 0px; float: left; width:8px; height: 8px; background: url(Graphics/Icon/crossBig.png) #87c80a;}
+.iconBirdSmallGreen { margin:auto; margin:0px 8px 0px 0px; float: left; width:11px; height: 9px; background: url(Graphics/Icon/birdSmallGreen.png);}
+.iconBirdSmallBlue { margin:auto; margin:3px 8px 0px 0px; float: left; width:11px; height: 9px; background: url(Graphics/Icon/birdSmallBlue.png);}
+.iconBirdSmallOrange { margin:auto; margin:3px 8px 0px 0px; float: left; width:11px; height: 9px; background: url(Graphics/Icon/birdSmallOrange.png);}
+.iconBirdSmallWhite { margin:auto; margin:-1px 5px 0px 0px; float: left; width:15px; height:14px; background: url(Graphics/Icon/birdSmallWhite.png);}
+.iconCrossSmallRed { margin:auto; margin:5px 5px 0px 0px; float: left; width:11px; height:11px; background: url(iconCrossSmallRed.png);}
+.iconStar { margin:auto; margin:6px 5px 0px 0px; float: left; width:7px; height: 6px; background: url(Graphics/Icon/star.png);}
+.iconStarEmpty  { margin:auto; margin:0px 10px 0px 0px; float:left; width:22px; height:18px; background: url(Graphics/Icon/starEmpty.png);}
+.iconStarHalf  { margin:auto; margin:0px 10px 0px 0px; float:left; width:22px; height:18px; background: url(Graphics/Icon/starHalf.png);}
+.iconStarFull  { margin:auto; margin:0px 10px 0px 0px; float:left; width:22px; height:18px; background: url(Graphics/Icon/starFull.png);}
+
+.icon1  { margin:auto; margin:0px 10px 0px 0px; float:left; width:20px; height:20px; background: url(Graphics/Icon/1.png);}
+.icon2  { margin:auto; margin:0px 10px 0px 0px; float:left; width:20px; height:20px; background: url(Graphics/Icon/2.png);}
+.icon3  { margin:auto; margin:0px 10px 0px 0px; float:left; width:20px; height:20px; background: url(Graphics/Icon/3.png);}
+.icon4  { margin:auto; margin:0px 10px 0px 0px; float:left; width:20px; height:20px; background: url(Graphics/Icon/4.png);}
+.icon5  { margin:auto; margin:0px 10px 0px 0px; float:left; width:20px; height:20px; background: url(Graphics/Icon/5.png);}
+.icon6  { margin:auto; margin:0px 10px 0px 0px; float:left; width:20px; height:20px; background: url(Graphics/Icon/6.png);}
+.icon7  { margin:auto; margin:0px 10px 0px 0px; float:left; width:20px; height:20px; background: url(Graphics/Icon/7.png);}
+.icon8  { margin:auto; margin:0px 10px 0px 0px; float:left; width:20px; height:20px; background: url(Graphics/Icon/8.png);}
+.icon9  { margin:auto; margin:0px 10px 0px 0px; float:left; width:20px; height:20px; background: url(Graphics/Icon/9.png);}
+
+

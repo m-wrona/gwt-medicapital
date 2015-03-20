@@ -1,0 +1,102 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.inputPageNumber {
+			margin-top: -2px;
+			float: left;
+			width: 20px;
+			height: 16px;
+			padding-left: 3px;
+			color: #565656;
+			font-size: 12px;
+			font-family: 'Helvetica', Arial, 'Tahoma', sans-serif;
+			background-color: #FFF;
+			border: 1px solid #aaaaaa;
+		}
+		
+		.visitCheckBoxDeleteAll {
+			margin: auto;
+			float: left;
+			text-align: center;
+			width: 35px;
+			height: 20px;
+		}
+		
+		.buttonNext {
+			cursor: pointer;
+			width: 55px;
+			height: 12px;
+			background: url(Graphics/Button/next.png);
+			border: 0px;
+		}
+		
+		.buttonPrevious {
+			cursor: pointer;
+			width: 62px;
+			height: 12px;
+			background: url(Graphics/Button/previous.png);
+			border: 0px;
+		}
+		
+		.buttonFirst {
+			cursor: pointer;
+			width: 50px;
+			height: 12px;
+			background: url(Graphics/Button/first.png);
+			border: 0px;
+		}
+		
+		.buttonLast {
+			cursor: pointer;
+			width: 50px;
+			height: 12px;
+			background: url(Graphics/Button/last.png);
+			border: 0px;
+		}
+		
+		.buttonDeleteAll {
+			cursor: pointer;
+			width: 90px;
+			height: 12px;
+			background: url(Graphics/Button/deleteAll.png);
+			border: 0px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HTMLPanel ui:field="headerPanel" />
+		<g:SimplePanel ui:field="dataPanel" />
+		<g:HTMLPanel>
+			<div class="tableButtons">
+				<div class="empty" style="margin-right:5px;">
+					<g:PushButton ui:field="buttonAdd" visible="false">Dodaj</g:PushButton>
+				</div>
+				<div class="empty" style="margin-right:5px;">
+					<g:PushButton ui:field="deleteSelected" addStyleNames='{style.buttonDeleteAll}' />
+				</div>
+				<div class="empty" style="margin-right:5px;">
+					<g:PushButton ui:field="buttonFirst" addStyleNames='{style.buttonFirst}' />
+				</div>
+				<div class="empty" style="margin-right:5px;">
+					<g:PushButton ui:field="buttonPrevious" addStyleNames='{style.buttonPrevious}' />
+				</div>
+				<div class="empty" style="margin-right:5px;">
+					<g:IntegerBox ui:field="pageNumber" addStyleNames='{style.inputPageNumber}' />
+				</div>
+				<div class="empty" style="margin-right:5px; font-color: #565656;">
+					z
+				</div>
+				<div class="empty" style="margin-right:5px; font-color: #565656;">
+					<g:Label ui:field="pageCount" />
+				</div>
+				<div class="empty" style="margin-right:5px;">
+					<g:PushButton ui:field="buttonNext" addStyleNames='{style.buttonNext}' />
+				</div>
+				<div class="empty" style="margin-right:5px;">
+					<g:PushButton ui:field="buttonLast" addStyleNames='{style.buttonLast}' />
+				</div>
+			</div>
+		</g:HTMLPanel>
+		<g:HTMLPanel ui:field="footerPanel" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

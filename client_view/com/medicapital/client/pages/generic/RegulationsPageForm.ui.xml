@@ -1,0 +1,20 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<g:VerticalPanel>
+		<g:HTML>
+			 <div class="letterTitleBig">
+			 		<div class="iconBirdBigBlue"></div>
+					Regulamin obowiązujący w serwisie MediCapital (od dnia 01.02.2010 r.)
+			 	 </div>
+			 	 <div class="letterTextNormal">					  			
+			 	 	<div class="empty" style="margin:10px">  		
+			  	  	   1) regula 1
+			  	  	   <br/>
+			  	  	   2) regula 2
+				  	  	<br/><br/>				  	  	
+					</div>	
+				 </div>
+		</g:HTML>
+	</g:VerticalPanel>
+</ui:UiBinder>

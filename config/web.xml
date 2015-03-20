@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+	<!-- SERVLETS -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/ServerAccessPoint-servlet.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>ServerAccessPoint</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet 
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>SpringGwtRemoteServiceServlet</servlet-name>
+		<servlet-class>com.medicapital.server.access.servlet.SpringGwtRemoteServiceServlet</servlet-class>
+	</servlet>
+
+	<!-- SERVLETS MAPPINGS -->
+	<servlet-mapping>
+		<servlet-name>ServerAccessPoint</servlet-name>
+		<url-pattern>/MediCapital/CommandService/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>SpringGwtRemoteServiceServlet</servlet-name>
+		<url-pattern>/MediCapital/GwtService/*</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>MediCapital.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+                           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	default-lazy-init="true">
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.medicapital.server" />
+	<aop:aspectj-autoproxy />
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<!-- mapping between RPC messages and command executors -->
+	<bean id="urlMapping" class="org.gwtwidgets.server.spring.GWTHandler">
+		<property name="mappings">
+			<map>
+				<entry key="/WorkHours.rpc" value-ref="workHoursCommandExecutor" />
+				<entry key="/Article.rpc" value-ref="articleCommandExecutor" />
+				<entry key="/VisitType.rpc" value-ref="visitTypeCommandExecutor" />
+				<entry key="/CalendarEvent.rpc" value-ref="calendarEventCommandExecutor" />
+				<entry key="/Specialization.rpc" value-ref="specializationCommandExecutor" />
+				<entry key="/PatientEvaluation.rpc" value-ref="patientEvaluationCommandExecutor" />
+				<entry key="/PatientVisit.rpc" value-ref="patientVisitCommandExecutor" />
+				<entry key="/LoginData.rpc" value-ref="loginCommandExecutor" />
+				<entry key="/User.rpc" value-ref="userCommandExecutor" />
+				<entry key="/Doctor.rpc" value-ref="doctorCommandExecutor" />
+				<entry key="/City.rpc" value-ref="cityCommandExecutor" />
+				<entry key="/Hobby.rpc" value-ref="hobbyCommandExecutor" />
+			</map>
+		</property>
+	</bean>
+
+	<!-- mapping between URL addresses and controllers -->
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<value>
+				/doctorController=doctorController
+				/articleController=articleController
+            </value>
+		</property>
+	</bean>
+
+	<!-- servlets -->
+	<bean id="userServiceServlet"
+		class="com.medicapital.server.access.servlet.UserServiceServlet">
+		<property name="userFacade" ref="userFacade" />
+	</bean>
+
+	<!-- GWT-RPC communication -->
+	<bean id="workHoursCommandExecutor"
+		class="com.medicapital.server.access.gwtrpc.WorkHoursCommandExecutor">
+		<property name="workHoursFacade" ref="workHoursFacade" />
+		<property name="securityManager" ref="securityManager" />
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="articleCommandExecutor"
+		class="com.medicapital.server.access.gwtrpc.ArticleCommandExecutor">
+		<property name="articleFacade" ref="articleFacade" />
+		<property name="securityManager" ref="securityManager" />
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="visitTypeCommandExecutor"
+		class="com.medicapital.server.access.gwtrpc.VisitTypeCommandExecutor">
+		<property name="visitTypeFacade" ref="visitTypeFacade" />
+		<property name="securityManager" ref="securityManager" />
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="calendarEventCommandExecutor"
+		class="com.medicapital.server.access.gwtrpc.CalendarEventCommandExecutor">
+		<property name="calendarEventFacade" ref="calendarEventFacade" />
+		<property name="workHoursFacade" ref="workHoursFacade" />
+		<property name="securityManager" ref="securityManager" />
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="specializationCommandExecutor"
+		class="com.medicapital.server.access.gwtrpc.SpecializationCommandExecutor">
+		<property name="genericDataFacade" ref="genericDataFacade" />
+		<property name="securityManager" ref="securityManager" />
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="patientEvaluationCommandExecutor"
+		class="com.medicapital.server.access.gwtrpc.PatientEvaluationCommandExecutor">
+		<property name="patientEvaluationFacade" ref="patientEvaluationFacade" />
+		<property name="securityManager" ref="securityManager" />
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="patientVisitCommandExecutor"
+		class="com.medicapital.server.access.gwtrpc.PatientVisitCommandExecutor">
+		<property name="patientVisitFacade" ref="patientVisitFacade" />
+		<property name="securityManager" ref="securityManager" />
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="userCommandExecutor"
+		class="com.medicapital.server.access.gwtrpc.UserCommandExecutor">
+		<property name="userFacade" ref="userFacade" />
+		<property name="securityManager" ref="securityManager" />
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="doctorCommandExecutor"
+		class="com.medicapital.server.access.gwtrpc.DoctorCommandExecutor">
+		<property name="doctorFacade" ref="doctorFacade" />
+		<property name="securityManager" ref="securityManager" />
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="hobbyCommandExecutor"
+		class="com.medicapital.server.access.gwtrpc.HobbyCommandExecutor">
+		<property name="genericDataFacade" ref="genericDataFacade" />
+		<property name="securityManager" ref="securityManager" />
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="cityCommandExecutor"
+		class="com.medicapital.server.access.gwtrpc.CityCommandExecutor">
+		<property name="genericDataFacade" ref="genericDataFacade" />
+		<property name="securityManager" ref="securityManager" />
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="loginCommandExecutor" class="com.medicapital.server.access.gwtrpc.LoginAccess">
+		<property name="securityManager" ref="securityManager" />
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- URL communication -->
+	<bean id="doctorController" class="com.medicapital.server.access.url.DoctorContoller">
+		<property name="doctorFacade" ref="doctorFacade" />
+		<property name="securityManager" ref="securityManager" />
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="articleController" class="com.medicapital.server.access.url.ArticleController">
+		<property name="articleFacade" ref="articleFacade" />
+		<property name="securityManager" ref="securityManager" />
+		<property name="sessionFactory" ref="sessionFactory" />
+		<property name="multipartResolver" ref="multipartResolver" />
+	</bean>
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="100000" />
+	</bean>
+
+	<!-- facades -->
+	<bean id="visitTypeFacade" class="com.medicapital.server.logic.VisitTypeFacade">
+		<property name="daoVisitType" ref="daoVisitType" />
+	</bean>
+	<bean id="workHoursFacade" class="com.medicapital.server.logic.WorkHoursFacade">
+		<property name="daoWorkHours" ref="daoWorkHours" />
+	</bean>
+	<bean id="securityManager" class="com.medicapital.server.security.SecurityManager">
+		<property name="daoLogin" ref="daoLogin" />
+		<property name="emailService" ref="eMailService" />
+		<property name="passwordGenerator" ref="passwordGenerator" />
+	</bean>
+	<bean id="genericDataFacade" class="com.medicapital.server.logic.GenericDataFacade">
+		<property name="daoSpecialization" ref="daoSpecialization" />
+		<property name="daoCity" ref="daoCity" />
+		<property name="daoHobby" ref="daoHobby" />
+	</bean>
+	<bean id="patientEvaluationFacade" class="com.medicapital.server.logic.PatientEvaluationFacade">
+		<property name="daoPatientEvaluation" ref="daoPatientEvaluation" />
+	</bean>
+	<bean id="calendarEventFacade" class="com.medicapital.server.logic.CalendarEventFacade">
+		<property name="patientVisitFacade" ref="patientVisitFacade" />
+	</bean>
+	<bean id="patientVisitFacade" class="com.medicapital.server.logic.PatientVisitFacade">
+		<property name="daoPatientVisit" ref="daoPatientVisit" />
+	</bean>
+	<bean id="userFacade" class="com.medicapital.server.logic.UserFacade">
+		<property name="daoUser" ref="daoUser" />
+		<property name="emailService" ref="eMailService" />
+		<property name="passwordGenerator" ref="passwordGenerator" />
+	</bean>
+	<bean id="doctorFacade" class="com.medicapital.server.logic.DoctorFacade">
+		<property name="daoDoctor" ref="daoDoctor" />
+	</bean>
+	<bean id="articleFacade" class="com.medicapital.server.logic.ArticleFacade">
+		<property name="daoArticle" ref="daoArticle" />
+		<property name="daoArticleAttachments" ref="daoArticleAttachments" />
+	</bean>
+
+	<!-- generic internal services -->
+	<bean id="sessionFactory" class="com.medicapital.server.security.SessionFactory">
+		<property name="supportLocalSession" value="true" />
+	</bean>
+
+	<bean id="eMailService" class="com.medicapital.server.util.EmailService"
+		init-method="init" destroy-method="close">
+		<property name="serverUser" value="medicapital@poczta.fm" />
+		<property name="serverPassword" value="#zL7@m!k" />
+		<property name="transportProtocol" value="smtps" />
+		<property name="smtpHost" value="www.poczta.fm" />
+		<property name="smtpPort" value="587" />
+		<property name="authentication" value="true" />
+		<property name="debug" value="true" />
+		<property name="socketFactoryClass" value="javax.net.ssl.SSLSocketFactory" />
+		<property name="socketFactoryFallback" value="false" />
+	</bean>
+	<bean id="passwordGenerator" class="com.medicapital.server.util.PasswordGenerator">
+	</bean>
+
+	<!-- DAO access -->
+	<bean id="daoWorkHours"
+		class="com.medicapital.server.database.hibernate.HibernateWorkHours"
+		destroy-method="close">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+	</bean>
+	<bean id="daoArticle"
+		class="com.medicapital.server.database.hibernate.HibernateArticle"
+		destroy-method="close">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+		<property name="daoArticleAttachments" ref="daoArticleAttachments" />
+	</bean>
+	<bean id="daoArticleAttachments"
+		class="com.medicapital.server.database.hibernate.HibernateArticleAttachments"
+		destroy-method="close">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+	</bean>
+
+	<bean id="daoVisitType"
+		class="com.medicapital.server.database.hibernate.HibernateVisitType"
+		destroy-method="close">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+	</bean>
+
+	<bean id="daoSpecialization"
+		class="com.medicapital.server.database.hibernate.HibernateSpecialization"
+		destroy-method="close">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+	</bean>
+
+	<bean id="daoPatientEvaluation"
+		class="com.medicapital.server.database.hibernate.HibernatePatientEvaluation"
+		destroy-method="close">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+	</bean>
+
+	<bean id="daoPatientVisit"
+		class="com.medicapital.server.database.hibernate.HibernatePatientVisit"
+		destroy-method="close">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+		<property name="daoUser" ref="daoUser" />
+		<property name="daoDoctor" ref="daoDoctor" />
+	</bean>
+
+	<bean id="daoDoctor"
+		class="com.medicapital.server.database.hibernate.HibernateDoctor"
+		destroy-method="close">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+		<property name="daoUser" ref="daoUser" />
+	</bean>
+
+	<bean id="daoUser" class="com.medicapital.server.database.hibernate.HibernateUser"
+		destroy-method="close">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+	</bean>
+
+	<bean id="daoLogin"
+		class="com.medicapital.server.database.hibernate.HibernateLogin"
+		destroy-method="close">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+	</bean>
+
+	<bean id="daoCity" class="com.medicapital.server.database.hibernate.HibernateCity"
+		destroy-method="close">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+	</bean>
+
+	<bean id="daoHobby"
+		class="com.medicapital.server.database.hibernate.HibernateHobby"
+		destroy-method="close">
+		<property name="sessionFactory" ref="hibernateSessionFactory" />
+	</bean>
+
+	<!-- Hibernate configuration -->
+	<bean id="hibernateSessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+
+		<property name="dataSource" ref="hibernateDataSource" />
+		<property name="schemaUpdate" value="false" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect = org.hibernate.dialect.MySQLDialect
+				show_sql=false
+				hibernate.connection.release_mode=after_transaction
+				hibernate.dbcp.maxWait=100
+				hibernate.connection.autocommit=false
+				cache.provider_class=org.hibernate.cache.NoCacheProvider
+       		</value>
+		</property>
+		<property name="annotatedClasses">
+			<list>
+				<value>com.medicapital.server.database.hibernate.entities.WorkHoursEntity
+				</value>
+				<value>com.medicapital.server.database.hibernate.entities.ArticleAttachmentsEntity
+				</value>
+				<value>com.medicapital.server.database.hibernate.entities.ArticleEntity
+				</value>
+				<value>com.medicapital.server.database.hibernate.entities.CalendarEventEntity
+				</value>
+				<value>com.medicapital.server.database.hibernate.entities.VisitTypeEntity
+				</value>
+				<value>com.medicapital.server.database.hibernate.entities.SpecializationEntity
+				</value>
+				<value>com.medicapital.server.database.hibernate.entities.PatientEvaluationEntity
+				</value>
+				<value>com.medicapital.server.database.hibernate.entities.PatientVisitEntity
+				</value>
+				<value>com.medicapital.server.database.hibernate.entities.DoctorEntity
+				</value>
+				<value>com.medicapital.server.database.hibernate.entities.UserEntity
+				</value>
+				<value>com.medicapital.server.database.hibernate.entities.LocalizationEntity
+				</value>
+				<value>com.medicapital.server.database.hibernate.entities.HobbyEntity
+				</value>
+				<value>com.medicapital.server.database.hibernate.entities.CityEntity
+				</value>
+				<value>com.medicapital.server.database.hibernate.entities.RegionEntity
+				</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- data base resource management -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="hibernateDataSource" />
+	</bean>
+
+	<bean id="hibernateDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/medicapital?characterEncoding=utf8" />
+		<property name="username" value="root" />
+		<property name="password" value="wrona" />
+		<property name="maxIdle" value="3600000" />
+		<property name="maxActive" value="3600000" />
+		<property name="maxWait" value="3600000" />
+		<property name="defaultAutoCommit" value="true" />
+	</bean>
+
+</beans>
+                    

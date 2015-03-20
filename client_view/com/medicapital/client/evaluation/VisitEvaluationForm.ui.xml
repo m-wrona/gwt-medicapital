@@ -1,0 +1,111 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:m='urn:import:com.google.gwt.maps.client'>
+
+	<ui:style>
+		.inputVisitDetailsBorder {
+			float: left;
+			width: 230px;
+			padding-left: 3px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			font-size: 12px;
+			background-color: #FFF;
+			border: 1px solid #aaaaaa;
+		}
+		
+		.inputVisitDetailsNoBorder {
+			float: left;
+			width: 230px;
+			padding-left: 3px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			font-size: 12px;
+			background-color: #FFF;
+			border: 1px solid #aaaaaa;
+		}
+		
+		.textareaVisitDetails {
+			float: left;
+			width: 230px;
+			height: 110px;
+			padding-left: 3px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			font-size: 12px;
+			background-color: #FFF;
+			border: 1px solid #aaaaaa;
+		}
+		
+		.buttonClose {
+			cursor: pointer;
+			float: right;
+			width: 3px;
+			height: 7px;
+			background: url(Graphics/Button/close.png);
+			border: 0px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="empty">
+			<div class="picDetailsVisit"></div>
+			<div class="empty" style="margin-left:-20px; width:366px">
+				<div class="cornerTopLeft"></div>
+				<div class="cornerTopMiddle" style="width:340px"></div>
+				<div class="cornerTopRight"></div>
+				<div class="cornerMiddleSmallLeft" style="height:249px"></div>
+				<div class="empty"
+					style="padding:8px 10px 4px 10px; margin-top:-6px; width:332px; background:#FFF">
+					<g:PushButton ui:field="buttonCloseWindow"
+						addStyleNames='{style.buttonClose}' />
+					<div class="empty">
+						<div class="letterTitleBig">
+							<div class="iconBirdBigBlue"></div>
+							Komentarz i opinia wizyty
+						</div>
+					</div>
+					<div class="letterTextNormal">
+						<div class="empty"
+							style="margin-top:10px; width:100%; padding-bottom:5px; border-bottom:1px dotted #aeaeae">
+
+							<div class="empty" style="width:95px">
+								Wystawiono:
+							</div>
+							<div class="empty">
+								<g:TextBox ui:field="evaluationDate" addStyleNames='{style.inputVisitDetailsNoBorder}' />
+							</div>
+						</div>
+						<div class="empty"
+							style="margin-top:5px; padding-bottom:5px; width:100%; border-bottom:1px dotted #aeaeae">
+							<div class="empty" style="width:95px">
+								Twoja ocena:
+							</div>
+							<div class="empty">
+								<g:TextBox ui:field="evaluation" addStyleNames='{style.inputVisitDetailsBorder}' />
+							</div>
+						</div>
+						<div class="empty" style="margin-top:8px; width:100%">
+							<div class="empty" style="width:95px">
+								Tytuł opini:
+							</div>
+							<div class="empty">
+								<g:TextBox ui:field="title" addStyleNames='{style.inputVisitDetailsBorder}' />
+							</div>
+						</div>
+						<div class="empty" style="width:95px">
+							Komentarz:
+							</div>
+						<div class="empty">
+							<g:TextArea ui:field="description" addStyleNames='{style.textareaVisitDetails}' />
+						</div>
+					</div>
+				</div>
+				<div class="cornerMiddleSmallRight" style="height:249px"></div>
+				<div class="empty" style="margin-top:-6px">
+					<div class="cornerBottomLeft"></div>
+					<div class="cornerBottomMiddle" style="width:340px"></div>
+					<div class="cornerBottomRight"></div>
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

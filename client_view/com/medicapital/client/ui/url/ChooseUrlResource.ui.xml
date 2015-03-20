@@ -1,0 +1,17 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Label ui:field="labelDescription" text="Opis" visible="false" />
+		<g:TextBox ui:field="description" visible="false" />
+		<g:FormPanel ui:field="formPanel">
+			<g:FileUpload ui:field="fileUpload" width="340px" />
+		</g:FormPanel>
+		<g:Button ui:field="buttonSave">Zapisz</g:Button>
+		<g:Button ui:field="buttonDelete">Skasuj</g:Button>
+		<g:Button ui:field="buttonCancel">Zamknij</g:Button>
+	</g:HTMLPanel>
+</ui:UiBinder> 

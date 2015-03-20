@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:m="urn:import:com.medicapital.client.user">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:TabLayoutPanel barHeight="40" barUnit="PX" width="1000px"
+			height="1000px">
+			<g:tab>
+				<g:header>
+					Dane użytkowinka
+            </g:header>
+				<m:EditUserDataForm ui:field="userUI" />
+			</g:tab>
+			<g:tab>
+				<g:header>
+					Dane lekarza
+            </g:header>
+				<g:HTMLPanel>
+					<g:Image ui:field="profileImage" />
+					<g:Label>Numer prawa wykonywania zawodu: </g:Label>
+					<g:TextBox ui:field="workId" />
+					<g:Label>Średnia ocena: </g:Label>
+					<g:Label ui:field="averageEvaluation" />
+					<g:Label>Informacje o mnie: </g:Label>
+					<g:TextArea ui:field="notes" />
+				</g:HTMLPanel>
+			</g:tab>
+		</g:TabLayoutPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

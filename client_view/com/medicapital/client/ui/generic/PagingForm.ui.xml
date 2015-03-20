@@ -1,0 +1,58 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.buttonNext {
+			cursor: pointer;
+			width: 55px;
+			height: 12px;
+			background: url(Graphics/Button/next.png);
+			border: 0px;
+		}
+		
+		.buttonPrevious {
+			cursor: pointer;
+			width: 62px;
+			height: 12px;
+			background: url(Graphics/Button/previous.png);
+			border: 0px;
+		}
+		
+		.buttonFirst {
+			cursor: pointer;
+			width: 50px;
+			height: 12px;
+			background: url(Graphics/Button/first.png);
+			border: 0px;
+		}
+		
+		.buttonLast {
+			cursor: pointer;
+			width: 50px;
+			height: 12px;
+			background: url(Graphics/Button/last.png);
+			border: 0px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="dataText">
+			<div class="empty" style="margin-right:5px;">
+				<g:PushButton ui:field="buttonFirst" addStyleNames='{style.buttonFirst}' />
+			</div>
+			<div class="empty" style="margin-right:5px;">
+				<g:PushButton ui:field="buttonPrevious" addStyleNames='{style.buttonPrevious}' />
+			</div>
+			<div class="empty" style="margin-right:5px;">
+				<g:TextBox ui:field="currentPageNumber" />
+				/
+				<g:Label ui:field="pageCount" />
+			</div>
+			<div class="empty" style="margin-right:5px;">
+				<g:PushButton ui:field="buttonNext" addStyleNames='{style.buttonNext}' />
+			</div>
+			<div class="empty" style="margin-right:5px;">
+				<g:PushButton ui:field="buttonLast" addStyleNames='{style.buttonLast}' />
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

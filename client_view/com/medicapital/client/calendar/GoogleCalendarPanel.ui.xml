@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:com.bradrydzewski.gwt.calendar.client"
+	xmlns:d="urn:import:com.google.gwt.user.datepicker.client">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		Żółty kolor - termin jest dostępny jedynie dla właściciela(np. doktor
+		może nie pracować w danym terminie, więc pacjenci nie mogą umawiać się
+		w danym terminie)
+		Biały kolor - termin jest ogólnie dostępny
+		<g:PushButton ui:field="today">Dziś</g:PushButton>
+		<g:PushButton ui:field="previous">Wstecz</g:PushButton>
+		<d:DateBox ui:field="date" title="Naciśniej, aby zmienić datę" />
+		<g:PushButton ui:field="next">Dalej</g:PushButton>
+		<g:DecoratedTabBar ui:field="calendarViews" />
+		<c:Calendar ui:field="calendar" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

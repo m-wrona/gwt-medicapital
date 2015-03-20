@@ -1,0 +1,183 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:e='urn:import:com.medicapital.client.ui.generic'>
+
+	<ui:style>
+		.errorMsg {
+			color: red;
+		}
+		
+		.successMsg {
+			color: green;
+		}
+		
+		.buttonSaveChange {
+			cursor: pointer;
+			margin-left: 3px;
+			width: 74px;
+			height: 12px;
+			background: url(Graphics/Button/saveChange.png);
+			border: 0px;
+		}
+		
+		.inputProfileUser {
+			margin-top: -2px;
+			float: left;
+			width: 169px;
+			padding-left: 3px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			background: #FFF;
+			border: 1px solid #aaaaaa;
+			font-size: 12px;
+		}
+		
+		.inputListProfileUser {
+			margin-top: -2px;
+			float: left;
+			width: 176px;
+			padding-left: 3px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			background: #FFF;
+			border: 1px solid #aaaaaa;
+			font-size: 12px;
+		}
+		
+		.inputHobbiesProfileUser {
+			width: 173px;
+			height: 150px;
+			border: 1px solid #aaaaaa;
+			font-size: 12px;
+			background: #FFF;
+		}
+		
+		.inputYearProfileUser {
+			margin-top: -1px;
+			float: left;
+			width: 80px;
+			padding-left: 3px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			background: #FFF;
+			border: 1px solid #aaaaaa;
+			font-size: 12px;
+		}
+		
+		.inputDayProfileUser {
+			margin-top: -1px;
+			float: left;
+			width: 44px;
+			padding-left: 3px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			background: #FFF;
+			border: 1px solid #aaaaaa;
+			font-size: 12px;
+		}
+		
+		.inputMonthProfileUser {
+			margin-top: -1px;
+			float: left;
+			width: 44px;
+			padding-left: 3px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			background: #FFF;
+			border: 1px solid #aaaaaa;
+			font-size: 12px;
+		}
+	</ui:style>
+
+	<g:HTMLPanel>
+		<div class="dataTitle">
+			<div class="empty">
+				<div class="letterTitleBig">
+					<div class="iconBirdBigBlue"></div>
+					Kryteria wyszukiwania
+				</div>
+			</div>
+		</div>
+		<div class="dataShadow">
+			<div class="letterTextNormal">
+				<div class="empty" style="margin-top:5px; width:628px">
+					<div class="empty" style="width:100%">
+						<div class="empty" style="margin-left:10px; width:144px">
+							<div class="cornerTopLeft"></div>
+							<div class="cornerTopMiddle" style="width:118px"></div>
+							<div class="cornerTopRight"></div>
+							<div class="cornerMiddleSmallLeft" style="height:15px"></div>
+							<div class="foldInformationAboutYou"></div>
+							<div class="cornerMiddleSmallRight" style="height:15px"></div>
+						</div>
+					</div>
+					<div class="empty" style="margin-top:-7px; width:100%">
+						<div class="cornerTopLeft"></div>
+						<div class="cornerTopMiddle" style="width:602px"></div>
+						<div class="cornerTopRight"></div>
+						<div class="cornerMiddleSmallLeft" style="height:341px"></div>
+						<div class="empty"
+							style="margin-top:-6px; padding:3px 8px 6px 8px; width:598px; background:#f7f7f7">
+							<div class="empty"
+								style="margin-top:3px; padding-bottom:9px; width:298px; border-right:1px dotted #aeaeae">
+								<div class="profileCategory">Imię:</div>
+								<div class="profileField">
+									<g:TextBox ui:field="firstName" addStyleNames='{style.inputProfileUser}' />
+								</div>
+								<div class="profileCategory">Nazwisko:</div>
+								<div class="profileField">
+									<g:TextBox ui:field="lastName" addStyleNames='{style.inputProfileUser}' />
+								</div>
+								<div class="profileCategory">Ocena od:</div>
+								<div class="profileField">
+									<e:RatingForm ui:field="evaluationFrom" />
+								</div>
+								<div class="profileCategory">Ocena do:</div>
+								<div class="profileField">
+									<e:RatingForm ui:field="evaluationTo" />
+								</div>
+								<div class="profileCategory">Płeć:</div>
+								<div class="profileField">
+									<g:ListBox ui:field="sex" addStyleNames='{style.inputListProfileUser}' />
+								</div>
+								<div class="profileCategory">Dane adresowe:</div>
+								<div class="profileCategory">Adres:</div>
+								<div class="profileField">
+									<g:TextBox ui:field="address" addStyleNames='{style.inputProfileUser}' />
+								</div>
+								<div class="profileCategory">Województwo:</div>
+								<div class="profileField">
+									<g:ListBox ui:field="regions" addStyleNames='{style.inputListProfileUser}' />
+								</div>
+								<div class="profileCategory">Miasto:</div>
+								<div class="profileField">
+									<g:ListBox ui:field="cities" addStyleNames='{style.inputListProfileUser}' />
+								</div>
+							</div>
+						</div>
+						<div class="cornerMiddleSmallRight" style="height:341px"></div>
+						<div class="empty" style="margin-top:-6px">
+							<div class="cornerBottomLeft"></div>
+							<div class="cornerBottomMiddle" style="width:602px"></div>
+							<div class="cornerBottomRight"></div>
+						</div>
+						<div class="empty" style="margin:-5px 0px 0px 515px; width:104px">
+							<div class="cornerMiddleSmallLeft" style="height:12px"></div>
+							<div class="cornerMiddleSmallRight" style="height:12px"></div>
+							<div class="empty" style="margin-top:-6px">
+								<div class="cornerBottomLeft"></div>
+								<div class="cornerBottomMiddle" style="width:78px"></div>
+								<div class="cornerBottomRight"></div>
+							</div>
+
+							<g:Button ui:field="buttonSearch">Szukaj
+							</g:Button>
+							<g:Button ui:field="buttonCancel">Anuluj
+						    </g:Button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+
+</ui:UiBinder>

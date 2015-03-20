@@ -1,0 +1,36 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+<ui:style>
+		.menu {
+			position: relative;
+			margin: auto;
+			margin-left: 15px;
+			padding: 0px 5px 5px 0px;
+			float: left;
+			width: 698px;
+			height: 55px;
+			background: url(img/menu/picGroundFold.png);
+		}
+		
+		.menuButton {
+			position: relative;
+			margin: 16px 10px 10px 20px;
+			width: 100px;
+			height: 17px;
+		}
+	</ui:style>
+
+	<g:VerticalPanel>
+
+		<g:HorizontalPanel addStyleNames='{style.menu}'>
+			<g:HTML><div style='margin: 16px 10px 10px 20px'>Zarejestruj jako: </div></g:HTML>
+			<g:PushButton ui:field="buttonRegisterUser" addStyleNames='{style.menuButton}'>Klient</g:PushButton>
+			<g:PushButton ui:field="buttonRegisterDoctor" addStyleNames='{style.menuButton}'>Doktor</g:PushButton>
+		</g:HorizontalPanel>
+
+		<g:VerticalPanel ui:field="pagePanel" />
+
+	</g:VerticalPanel>
+
+</ui:UiBinder>

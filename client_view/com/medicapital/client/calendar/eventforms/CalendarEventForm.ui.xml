@@ -1,0 +1,55 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:p1="urn:import:com.google.gwt.user.cellview.client" 
+	xmlns:p2="urn:import:com.google.gwt.user.datepicker.client"
+	xmlns:t="urn:import:com.medicapital.client.ui.text"
+	>
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Grid width="196px" height="157px">
+			<g:row>
+				<g:customCell>
+					<g:Label text="Tytuł: " horizontalAlignment="ALIGN_RIGHT"/>
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox ui:field="title" width="165px" name="title"/>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label text="Data rozpoczęcia: " horizontalAlignment="ALIGN_RIGHT"/>
+				</g:customCell>
+				<g:customCell>
+					<p2:DateBox ui:field="startTime" width="165px"/>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label text="Data zakończenia: " horizontalAlignment="ALIGN_RIGHT" width="130px"/>
+				</g:customCell>
+				<g:customCell>
+					<p2:DateBox ui:field="endTime" width="165"/>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label text="Szczegóły:" horizontalAlignment="ALIGN_RIGHT"/>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		<g:VerticalPanel width="319px" height="243px">
+			<t:RichTextAreaForm ui:field="description" height="222px" width="311px"/>
+			<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
+				<g:HorizontalPanel width="309px">
+				<g:Button text="Dodaj" ui:field="buttonAdd" visible="false">Dodaj</g:Button>
+				<g:Button text="Edytuj" ui:field="buttonEdit" visible="false">Edytuj</g:Button>
+				<g:Button text="Usuń" ui:field="buttonDelete" visible="false">Usuń</g:Button>
+				<g:Button text="Anuluj" ui:field="buttonCancel">Anuluj</g:Button>
+			</g:HorizontalPanel>
+			</g:Cell>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

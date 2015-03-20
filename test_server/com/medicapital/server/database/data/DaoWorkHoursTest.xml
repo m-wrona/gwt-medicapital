@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<dataset>
+	<region regionId="1" name="testRegion" />
+	<city cityId="1" regionId="1" name="testCity" />
+	<localization localizationId="1" cityId="1" address="Address"
+		postalCode="12-345" />
+
+	<user userId="1" localizationId="1" login="testDoctor" password="testPassword"
+		firstName="firstName" lastName="lastName" eMail="address@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" userRole="Doctor" />
+	<doctor doctorId="1" userId="1" workId="workId-1234" notes="test doctor" />
+	<user userId="2" localizationId="1" login="testDoctor2" password="testPassword"
+		firstName="firstName" lastName="lastName" eMail="address@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" userRole="Doctor" />
+	<doctor doctorId="2" userId="2" workId="workId-1234" notes="test doctor" />
+	<user userId="3" localizationId="1" login="testDoctor3" password="testPassword"
+		firstName="firstName" lastName="lastName" eMail="address@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" userRole="Doctor" />
+	<doctor doctorId="3" userId="3" workId="workId-1234" notes="test doctor" />
+
+	<doctorWorkHours workHoursId="1" localizationId="1"
+		doctorId="1" startHour="8" startMinutes="00" endHour="16" endMinutes="00"
+		day="Monday" dateFrom="0000-00-00" dateTo="0000-00-00" description="" />
+	<doctorWorkHours workHoursId="2" localizationId="1"
+		doctorId="1" startHour="8" startMinutes="00" endHour="16" endMinutes="00"
+		day="Tuesday" dateFrom="0000-00-00" dateTo="0000-00-00" description="" />
+
+	<doctorWorkHours workHoursId="3" localizationId="1"
+		doctorId="2" startHour="8" startMinutes="00" endHour="16" endMinutes="00"
+		day="Monday" dateFrom="0000-00-00" dateTo="0000-00-00" description="" />
+	<doctorWorkHours workHoursId="4" localizationId="1"
+		doctorId="2" startHour="8" startMinutes="00" endHour="16" endMinutes="00"
+		day="Tuesday" dateFrom="0000-00-00" dateTo="0000-00-00" description="" />
+	<doctorWorkHours workHoursId="5" localizationId="1"
+		doctorId="2" startHour="0" startMinutes="00" endHour="0" endMinutes="00"
+		dateFrom="2010-06-01" dateTo="2010-06-14" description="" />
+
+	<doctorWorkHours workHoursId="6" localizationId="1"
+		doctorId="3" startHour="8" startMinutes="00" endHour="16" endMinutes="00"
+		day="Monday" dateFrom="0000-00-00" dateTo="0000-00-00" description="" />
+	<doctorWorkHours workHoursId="7" localizationId="1"
+		doctorId="3" startHour="8" startMinutes="00" endHour="16" endMinutes="00"
+		day="Tuesday" dateFrom="0000-00-00" dateTo="0000-00-00" description="" />
+</dataset>

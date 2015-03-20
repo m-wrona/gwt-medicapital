@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<dataset>
+	<region regionId="1" name="testRegion1" />
+	<city cityId="1" regionId="1" name="testCity1" />
+	<region regionId="2" name="testRegion2" />
+	<city cityId="2" regionId="2" name="testCity2" />
+	<region regionId="3" name="testRegion3" />
+	<city cityId="3" regionId="3" name="testCity3" />
+</dataset>

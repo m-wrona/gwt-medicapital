@@ -1,0 +1,93 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="dataTitle">
+			<div class="empty">
+				<div class="letterTitleBig">
+					<div class="iconBirdBigBlue"></div>
+					Profil przychodni: MediCover oddział we WrocławiuProfil przychodni:
+					MediCover oddział we Wrocławiu
+				</div>
+			</div>
+		</div>
+		<div class="dataText" style="margin-top:-5px">
+
+			<div class="officeLogo">
+				<img src="medicover.png" />
+				miejsce na logo gabinetu : 464 x 100
+				<br />
+				link prowadzacy do gabinetu
+			</div>
+			<div class="officeHead">
+				<img src="logo_naglowek.png" />
+			</div>
+		</div>
+		<div class="dataShadow" style="margin-top:-25px; z-index:2">
+
+			<div class="empty" style="margin-left:10px; width:120px">
+				<div class="cornerTopLeft"></div>
+				<div class="cornerTopMiddle" style="width:94px"></div>
+				<div class="cornerTopRight"></div>
+				<div class="cornerMiddleSmallLeft" style="height:12px"></div>
+				<div class="foldMenuCabinet"></div>
+				<div class="cornerMiddleSmallRight" style="height:12px"></div>
+			</div>
+			<div class="empty" style="margin-top:-2px; width:100%">
+
+				<div class="cornerTopLeft"></div>
+				<div class="cornerTopMiddle" style="width:930px"></div>
+				<div class="cornerTopRight"></div>
+			</div>
+			<div class="cornerMiddle" style="margin-left:-2px">
+				<div class="empty" style="margin:0px 0px 0px 13px; width:934px;">
+					<div class="officeMenu">
+						<div class="letterTextNormal">
+							<div class="officeMenuCategory">
+								<div class="iconOfficeCrossSmallBlue"></div>
+								<g:Anchor ui:field="aboutMe">O mnie</g:Anchor>
+							</div>
+							<div class="officeMenuCategory">
+								<div class="iconOfficeCrossSmallBlue"></div>
+								<g:Anchor ui:field="calendar">Kalendarz</g:Anchor>
+							</div>
+							<div class="officeMenuCategory">
+								<div class="iconOfficeCrossSmallBlue"></div>
+								<g:Anchor ui:field="articles">Artykuły</g:Anchor>
+							</div>
+							<div class="officeMenuCategory">
+								<div class="iconOfficeCrossSmallBlue"></div>
+								<g:Anchor ui:field="evaluations">Komenatarze i opinie</g:Anchor>
+							</div>
+							<div class="officeMenuCategory">
+								<div class="iconOfficeCrossSmallBlue"></div>
+								<g:Anchor ui:field="gallery">Galeria</g:Anchor>
+							</div>
+							<div class="officeMenuCategory">
+								<div class="iconOfficeCrossSmallBlue"></div>
+								<g:Anchor ui:field="contact">Kontakt</g:Anchor>
+							</div>
+							<div class="officeMenuCategory">
+								<div class="iconOfficeCrossSmallBlue"></div>
+								<g:Anchor ui:field="workHours">Godziny pracy</g:Anchor>
+							</div>
+						</div>
+					</div>
+					<div class="officeData">
+						<g:HTMLPanel ui:field="subPagePanel">
+							<div id="subPagePanelContainer"></div>
+						</g:HTMLPanel>
+					</div>
+				</div>
+			</div>
+			<div class="empty" style="width:100%">
+				<div class="cornerBottomLeft"></div>
+				<div class="cornerBottomMiddle" style="width:930px"></div>
+				<div class="cornerBottomRight"></div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

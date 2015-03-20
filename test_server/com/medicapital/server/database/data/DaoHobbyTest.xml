@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<dataset>
+	<hobby hobbyId="1" name="hobby1" />
+	<hobby hobbyId="2" name="hobby2" />
+	<hobby hobbyId="3" name="hobby3" />
+</dataset>

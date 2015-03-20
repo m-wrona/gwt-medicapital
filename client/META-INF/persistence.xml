@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+             http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+	version="1.0">
+
+	<persistence-unit name="DataBase-JPA" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.medicapital.client.entities.AccessType</class>
+		<class>com.medicapital.client.entities.Advert</class>
+		<class>com.medicapital.client.entities.City</class>
+		<class>com.medicapital.client.entities.Company</class>
+		<class>com.medicapital.client.entities.CompanyAdress</class>
+		<class>com.medicapital.client.entities.DaySchedule</class>
+		<class>com.medicapital.client.entities.Doctor</class>
+		<class>com.medicapital.client.entities.PatientQuery</class>
+		<class>com.medicapital.client.entities.PatientVisit</class>
+		<class>com.medicapital.client.entities.PetientEvaluation</class>
+		<class>com.medicapital.client.entities.SpecialEvent</class>
+		<class>com.medicapital.client.entities.Specialization</class>
+		<class>com.medicapital.client.entities.SystemProperty</class>
+		<class>com.medicapital.client.entities.User</class>
+		<class>com.medicapital.client.entities.UserRole</class>
+		<class>com.medicapital.client.entities.WorkHour</class>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.username" value="admin" />
+			<property name="hibernate.connection.password" value="wrona" />
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/medicapital" />
+		</properties>
+
+	</persistence-unit>
+</persistence>
+
+

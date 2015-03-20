@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MediCapital" default="build" basedir=".">
+	<!-- Configure path to GWT SDK -->
+	<property name="gwt.sdk" location="c:\tools\gwt-2.1.0\" />
+	<property name="tomcat" location="c:\Programme\Tomcat-6.0.29\webapps" />
+	<property name="tomcat.medicapital" location="${tomcat}\MediCapital" />
+	<property name="medicapital.config" location="${basedir}/config" />
+	<property name="medicapital.javasrc" location="${basedir}/javaSrc" />
+	<property name="medicapital.build" location="${basedir}/war" />
+	<property name="medicapital.war" location="${basedir}/MediCapital.war" />
+	<property name="medicapital.www" location="${basedir}/www" />
+	<property name="medicapital.libclient" location="${basedir}/lib/client" />
+	<property name="medicapital.libserver" location="${basedir}/lib/server" />
+
+	<!-- SWT on Mac requires the -XstartOFirstThreadFlag. -->
+	<condition property="XstartOnFirstThreadFlag" value="-XstartOnFirstThread" else="-Dgwt.dummy.arg1=">
+		<os family="mac" />
+	</condition>
+
+	<!-- SWT on Mac requires the -d32 flag if the VM is 64-bit. -->
+
+	<condition property="d32Flag" value="-d32" else="-Dgwt.dummy.arg2=">
+		<and>
+			<os family="mac" />
+			<equals arg1="${sun.arch.data.model}" arg2="64" />
+		</and>
+	</condition>
+
+
+	<path id="project.class.path">
+		<pathelement location="war/WEB-INF/classes" />
+		<pathelement location="${gwt.sdk}/gwt-user.jar" />
+		<fileset dir="${gwt.sdk}" includes="gwt-dev*.jar" />
+		<fileset dir="${medicapital.build}/WEB-INF/lib" includes="**/*.jar" />
+		<fileset dir="${medicapital.libclient}" includes="**/*.jar" />
+		<fileset dir="${medicapital.libserver}" includes="**/*.jar" />
+	</path>
+
+
+	<target name="initWar" depends="clean" description="Initialize WAR catalogue">
+		<mkdir dir="${medicapital.build}" />
+		<mkdir dir="${medicapital.build}/MediCapital" />
+		<mkdir dir="${medicapital.build}/WEB-INF" />
+		<mkdir dir="${medicapital.build}/WEB-INF/classes" />
+		<mkdir dir="${medicapital.build}/WEB-INF/lib" />
+		<!-- copy www pages -->
+		<copy todir="${medicapital.build}">
+			<fileset dir="${medicapital.www}" includes="**" />
+		</copy>
+		<!-- copy configuration files -->
+		<copy todir="${medicapital.build}/WEB-INF">
+			<fileset dir="${medicapital.config}" />
+		</copy>
+		<!-- copy libraries -->
+		<copy todir="${medicapital.build}/WEB-INF/lib" file="${gwt.sdk}/gwt-servlet.jar" />
+		<copy todir="${medicapital.build}/WEB-INF/lib">
+			<fileset dir="${medicapital.libclient}" includes="**/*.jar" />
+			<fileset dir="${medicapital.libserver}" includes="**/*.*" />
+		</copy>
+	</target>
+
+	<target name="javac" description="Compile java sources">
+		<delete dir="${medicapital.javasrc}" failonerror="false" />
+		<mkdir dir="${medicapital.javasrc}" />
+		<copy todir="${medicapital.javasrc}">
+			<fileset dir="${basedir}/common" includes="**" />
+			<fileset dir="${basedir}/server" includes="**" />
+			<fileset dir="${basedir}/client" includes="**" />
+			<fileset dir="${basedir}/client_view" includes="**" />
+			<fileset dir="${basedir}/gwt-cal" includes="**" />
+		</copy>
+		<javac srcdir="${medicapital.javasrc}" includes="**" encoding="utf-8" destdir="${medicapital.build}/WEB-INF/classes" source="1.6" target="1.6" nowarn="true" debug="true" debuglevel="lines,vars,source">
+			<classpath refid="project.class.path" />
+		</javac>
+		<copy todir="${medicapital.build}/WEB-INF/classes">
+			<fileset dir="common" excludes="**/*.java" />
+			<fileset dir="server" excludes="**/*.java" />
+			<fileset dir="client" excludes="**/*.java" />
+			<fileset dir="client_view" excludes="**/*.java" />
+			<fileset dir="gwt-cal" excludes="**/*.java" />
+		</copy>
+	</target>
+
+	<target name="gwtc" depends="initWar, javac" description="GWT compile to JavaScript">
+		<java failonerror="true" fork="true" classname="com.google.gwt.dev.Compiler">
+
+			<classpath>
+				<pathelement location="common" />
+				<pathelement location="server" />
+				<pathelement location="client" />
+				<pathelement location="client_view" />
+				<pathelement location="gwt-cal" />
+				<path refid="project.class.path" />
+			</classpath>
+
+			<!-- add jvmarg -Xss16M or similar if you see a StackOverflowError -->
+			<jvmarg value="-Xmx512M" />
+			<jvmarg value="${XstartOnFirstThreadFlag}" />
+			<jvmarg value="${d32Flag}" />
+
+			<!-- Additional arguments like -style PRETTY or -logLevel DEBUG -->
+			<arg value="com.medicapital.MediCapital" />
+		</java>
+	</target>
+
+	<target name="test_server" description="Run tests for server">
+		<mkdir dir="${basedir}/test_report" />
+		<javac srcdir="${medicapital.javasrc}" includes="**" encoding="utf-8" destdir="${medicapital.build}/WEB-INF/classes" source="1.6" target="1.6" nowarn="true" debug="true" debuglevel="lines,vars,source">
+			<classpath refid="project.class.path" />
+		</javac>
+		<junit fork="yes" printsummary="no" haltonfailure="no">
+			<batchtest fork="yes" todir="${basedir}/test_report">
+				<fileset dir="${basedir}/test_server">
+					<include name="**/*Test.class" />
+				</fileset>
+			</batchtest>
+			<formatter type="xml" />
+			<classpath refid="${basedir}/test_report" />
+		</junit>
+
+		<junitreport todir="${test.reports}">
+			<fileset dir="${test.reports}">
+				<include name="TEST-*.xml" />
+			</fileset>
+			<report todir="${test.reports}" />
+		</junitreport>
+	</target>
+
+	<!-- note: depends on javac but will not be declared explicitly to avoid unneeded compilation -->
+	<target name="hosted" description="Run hosted mode">
+		<java failonerror="true" fork="true" classname="com.google.gwt.dev.DevMode">
+			<classpath>
+				<pathelement location="common" />
+				<pathelement location="server" />
+				<pathelement location="client" />
+				<pathelement location="client_view" />
+				<pathelement location="gwt-cal" />
+				<path refid="project.class.path" />
+			</classpath>
+			<jvmarg value="-Xmx256M" />
+			<jvmarg value="${XstartOnFirstThreadFlag}" />
+			<jvmarg value="${d32Flag}" />
+			<arg value="-startupUrl" />
+			<arg value="MediCapital.html" />
+
+			<!-- Additional arguments like -style PRETTY or -logLevel DEBUG -->
+			<arg value="com.medicapital.MediCapital" />
+		</java>
+	</target>
+
+	<!-- note: depends on javac but will not be declared explicitly to avoid unneeded compilation -->
+	<target name="hosted_tomcat" description="Run hosted mode on tomcat server">
+		<java failonerror="true" fork="true" classname="com.google.gwt.dev.DevMode">
+			<classpath>
+				<pathelement location="common" />
+				<pathelement location="server" />
+				<pathelement location="client" />
+				<pathelement location="client_view" />
+				<pathelement location="gwt-cal" />
+				<path refid="project.class.path" />
+			</classpath>
+			<jvmarg value="-Xmx256M" />
+			<jvmarg value="${XstartOnFirstThreadFlag}" />
+			<jvmarg value="${d32Flag}" />
+			<arg value="-noserver" />
+			<arg value="-port" />
+			<arg value="8080" />
+			<arg value="-startupUrl" />
+			<arg value="http://127.0.0.1:8080/MediCapital" />
+			<arg value="com.medicapital.MediCapital" />
+		</java>
+	</target>
+
+	<target name="build" depends="gwtc" description="Build this project" />
+
+	<target name="war" depends="build" description="Create a war file">
+		<zip destfile="MediCapital.war" basedir="war" />
+	</target>
+
+	<target name="deploy_tomcat" depends="war" description="Deploy MediCapital project on Tomcat server (note: Tomcat must be stopped!)">
+		<copy todir="${tomcat}" file="${medicapital.war}" />
+		<copy todir="${tomcat.medicapital}">
+			<fileset dir="${medicapital.build}" />
+		</copy>
+	</target>
+
+	<target name="clean" description="Cleans project">
+		<delete dir="${medicapital.build}" failonerror="false" />
+		<delete dir="${medicapital.javasrc}" failonerror="false" />
+		<delete file="${medicapital.war}" failonerror="false" />
+	</target>
+</project>

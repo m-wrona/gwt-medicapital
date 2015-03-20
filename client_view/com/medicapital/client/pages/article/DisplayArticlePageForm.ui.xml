@@ -1,0 +1,10 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:a="urn:import:com.medicapital.client.article">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<a:DisplayArticleForm ui:field="articleForm" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

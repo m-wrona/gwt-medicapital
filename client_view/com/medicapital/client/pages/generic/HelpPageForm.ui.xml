@@ -1,0 +1,41 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<g:VerticalPanel>
+		<g:HTML>
+			<div class="letterTitleBig">
+				<div class="iconBirdBigBlue"></div>
+				Najczęściej zadawane pytania
+			</div>
+
+			<div class="letterTextNormal">
+				<div class="empty" style="margin-top:13px; width:447px">
+					<div class="icon_1"></div>
+					1) Czy facet ubrany w różowe stringi w świnki może pokazawać się
+					publicznie ?
+					<br />
+					<div class="empty" style="margin:10px; width:100%">
+						<b>Odpowiedź</b>
+						:
+						<i>raczej NIE:)</i>
+					</div>
+				</div>
+			</div>
+		</g:HTML>
+		<g:HTML>
+			<div class="letterTextNormal">
+				<div class="empty" style="margin-top:13px; width:447px">
+					<div class="icon_1"></div>
+					1) Czy facet ubrany w różowe stringi w świnki może pokazawać się
+					publicznie ?
+					<br />
+					<div class="empty" style="margin:10px; width:100%">
+						<b>Odpowiedź</b>
+						:
+						<i>raczej NIE:)</i>
+					</div>
+				</div>
+			</div>
+		</g:HTML>
+	</g:VerticalPanel>
+</ui:UiBinder>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<dataset>
+	<region regionId="1" name="testRegion" />
+	<city cityId="1" regionId="1" name="testCity" />
+	<localization localizationId="1" cityId="1" address="Address"
+		postalCode="12-345" />
+
+	<user userId="1" localizationId="1" login="doctor" password="testPassword"
+		firstName="firstName" lastName="lastName" eMail="address@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" userRole="Doctor" />
+	<doctor doctorId="1" userId="1" workId="workId-1234" notes="test doctor" />
+
+	<user userId="2" login="patient" password="testPassword"
+		firstName="firstName" lastName="lastName" eMail="address@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" userRole="User" />
+
+	<patientevaluation evaluationId="1" evaluation="5"
+		title="evaluation" description="description" />
+	<patientvisit visitId="1" beginTime="2010-01-02 16:00:00"
+		endTime="2010-01-02 16:15:00" evaluationId="1" doctorId="1" patientId="2"
+		title="visit reason" notes="notes" localizationId="1" />
+	<patientvisit visitId="2" beginTime="2010-01-02 17:00:00"
+		endTime="2010-01-02 17:15:00" doctorId="1" patientId="2" title="visit reason"
+		notes="notes" localizationId="1" />
+	<patientvisit visitId="3" beginTime="2012-01-20 10:00:00"
+		endTime="2012-01-20 10:15:00" doctorId="1" patientId="2" title="visit reason"
+		notes="notes" localizationId="1" />
+	<patientvisit visitId="4" beginTime="2012-01-20 10:15:00"
+		endTime="2012-01-20 10:30:00" doctorId="1" patientId="2" title="visit reason"
+		notes="notes" localizationId="1" />
+
+</dataset>

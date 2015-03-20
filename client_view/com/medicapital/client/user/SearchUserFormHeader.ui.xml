@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Label>Kryteria wyszukiwania:</g:Label>
+		<g:Label>Imię:</g:Label>
+		<g:TextBox ui:field="searchFirstName" />
+		<g:Label>Nazwisko:</g:Label>
+		<g:TextBox ui:field="searchLastName" />
+		<g:PushButton ui:field="buttonSearch">Szukaj</g:PushButton>
+		<g:PushButton ui:field="buttonCancel">Anuluj</g:PushButton>
+
+		<br />
+		<g:Label>Nazwisko</g:Label>
+		<g:Label>Imię</g:Label>
+		<g:Label>Rola</g:Label>
+		<g:Label>Opcje</g:Label>
+	</g:HTMLPanel>
+</ui:UiBinder> 

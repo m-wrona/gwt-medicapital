@@ -1,0 +1,16 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+	<g:Label ui:field="day" />
+		<g:CheckBox ui:field="selected"/>
+		<g:Label ui:field="dateDay" />
+		<g:Label ui:field="workHours" />
+		<g:Label ui:field="address" />
+		<g:Label ui:field="description" />
+		<g:PushButton ui:field="buttonEdit" visible='false' >Edytuj</g:PushButton>
+	</g:HTMLPanel>
+</ui:UiBinder> 

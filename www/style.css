@@ -1,0 +1,272 @@
+
+.emptyCenter { position:relative; margin:auto; border:0px solid #216781;}
+.popupWindow { z-index: 3; }
+
+/* LETTER PICTURES*/ 
+
+
+
+.letterName { margin:auto; margin-top:4px; float:left; width:27px; height:15px; background: url(Letter/name.png);}
+.letterSurname { margin:auto; margin-top:5px; float:left; width:60px; height:12px; background: url(Letter/surname.png);}
+.letterCity { margin:auto; margin-top:4px; float:left; width:45px; height:12px; background: url(Letter/city.png);}
+.letterProvince { margin:auto; margin-top:4px; float:left; width:89px; height:14px; background: url(Letter/province.png);}
+.letterSpecialization { margin:auto; margin-top:4px; float:left; width:80px; height:13px; background: url(Letter/specialization.png);}
+.letterNumberId { margin:auto; margin-top:5px; float:left; width:56px; height:12px; background: url(Letter/numberId.png);}
+.letterFreeTerm { margin:auto; margin-top:5px; float:left; width:81px; height:12px; background: url(Letter/freeTerm.png);}
+
+.letterYourMenu { margin:auto; float:left; width:74px; height:12px; background: url(Graphics/Letter/User_Doctor/yourMenu.png);}
+.letterMyProfil { margin:auto; margin:-2px 3px 0px 0px; float:left; width:63px; height:14px; background: url(Graphics/Letter/User_Doctor/myProfil.png);}
+.letterOffice { margin:auto; margin:0px 3px 0px 0px; float:left; width:47px; height:12px; background: url(Graphics/Letter/User_Doctor/office.png);}
+.letterMyTimetable { margin:auto; margin:-2px 3px 0px 0px; float:left; width:86px; height:13px; background: url(Graphics/Letter/User_Doctor/myTimetable.png);}
+.letterMyVisit { margin:auto; margin:0px 3px 0px 0px; float:left; width:72px; height:12px; background: url(Graphics/Letter/User_Doctor/myVisit.png);}
+.letterPatients { margin:auto; margin:-1px 3px 0px 0px; float:left; width:50px; height:13px; background: url(Graphics/Letter/User_Doctor/patients.png);}
+.letterRelease { margin:auto; margin:0px 3px 0px 0px; float:left; width:62px; height:11px; background: url(Graphics/Letter/User_Doctor/release.png);}
+.letterRemindChemicals { margin:auto; margin:-1px 3px 0px 0px; float:left; width:92px; height:12px; background: url(Graphics/Letter/User_Doctor/remindChemicals.png);}
+.letterOtherOptions { margin:auto; margin:0px 3px 0px 0px; float:left; width:61px; height:12px; background: url(Graphics/Letter/User_Doctor/otherOptions.png);}
+.letterPay { margin:auto; margin:-2px 3px 0px 0px; float:left; width:59px; height:14px; background: url(Graphics/Letter/User_Doctor/pay.png);}
+
+/* First menu + Category*/ 
+.letterSeparator { margin:auto; float:left; width:1px; height:12px; background: url(Graphics/Letter/Home/separator.png);}
+
+.letterArtical { margin:auto; float:left; width:55px; height:12px; background: url(Graphics/Letter/Home/artical.png);}
+.letterLastAdd { margin:auto; float:left; width:101px; height:13px; background: url(Graphics/Letter/Home/lastAdd.png);}
+.letterLastOpinion { margin:auto; float:left; width:88px; height:12px; background: url(Graphics/Letter/Home/lastOpinion.png);}
+.letterMostRate { margin:auto; float:left; width:105px; height:13px; background: url(Graphics/Letter/Home/MostRate.png);}
+
+.letterMediCapital { margin:auto; float:left; width:66px; height:21px; background: url(Graphics/Letter/MediCapital/medicapital.png);}
+.letterAboutUs { margin:auto; float:left; width:46px; height:13px; background: url(Graphics/Letter/MediCapital/aboutUs.png);}
+.letterAdvertising { margin:auto; float:left; width:51px; height:12px; background: url(Graphics/Letter/MediCapital/advertising.png);}
+.letterSecurity { margin:auto; float:left; width:92px; height:13px; background: url(Graphics/Letter/MediCapital/security.png);}
+.letterStat { margin:auto; float:left; width:60px; height:13px; background: url(Graphics/Letter/MediCapital/stat.png);}
+
+.letterOffer { margin:auto; float:left; width:74px; height:23px; background: url(Graphics/Letter/Offer/offer.png);}
+.letterHowIts { margin:auto; float:left; width:80px; height:13px; background: url(Graphics/Letter/Offer/howIts.png);}
+.letterProfit { margin:auto; float:left; width:52px; height:13px; background: url(Graphics/Letter/Offer/profit.png);}
+.letterToDoctor { margin:auto; float:left; width:71px; height:13px; background: url(Graphics/Letter/Offer/toDoctor.png);}
+.letterToUser { margin:auto; float:left; width:101px; height:13px; background: url(Graphics/Letter/Offer/toUser.png);}
+
+.letterRegulations { margin:auto; float:left; width:68px; height:23px; background: url(Graphics/Letter/Regulations/regulations.png);}
+.letterToDoctor { margin:auto; float:left; width:71px; height:13px; background: url(Graphics/Letter/Regulations/toDoctor.png);}
+.letterToUser { margin:auto; float:left; width:101px; height:13px; background: url(Graphics/Letter/Regulations/toUser.png);}
+
+.letterHelp { margin:auto; float:left; width:55px; height:22px; background: url(Graphics/Letter/Help/help.png);}
+.letterFaq { margin:auto; float:left; width:175px; height:14px; background: url(Graphics/Letter/Help/faq.png);}
+
+.letterContact { margin:auto; float:left; width:56px; height:22px; background: url(Graphics/Letter/Contact/contact.png);}
+.letterDataAdress { margin:auto; float:left; width:204px; height:12px; background: url(Graphics/Letter/Contact/dataAdress.png);}
+.letterHowApproach { margin:auto; float:left; width:79px; height:14px; background: url(Graphics/Letter/Contact/howApproach.png);}
+.letterOurAddress { margin:auto; float:left; width:102px; height:13px; background: url(Graphics/Letter/Contact/ourAddress.png);}
+/* MENU + Category*/ 
+
+/* LETTER PICTURES*/ 
+ 
+/* LETTER */  
+.letterTitleBigLink {font-family: 'Helvetica CE', 'Helvetica', Arial, 'Tahoma', sans-serif; color: #393939; line-height: 1.75em; text-decoration: none; }
+.letterTitleBigLink:hover {font-family: 'Helvetica CE', 'Helvetica', Arial, 'Tahoma', sans-serif; color: #009ce4; line-height: 1.75em; text-decoration: none;}
+
+.letterTextNormalColorA {display:inline; margin:0; margin-right:3px; font-family: 'Helvetica', Arial, sans-serif; color: #009ce4; line-height: 1.75em; text-align:justify;}
+.letterTextNormalColorB {font-family: 'Helvetica', Arial, sans-serif; color: #FFFFFF; line-height: 1.75em; text-align:justify; }
+
+.letterTextNormalLink {font-family: 'Helvetica', Arial, 'Tahoma', sans-serif; color: #393939; line-height: 1.75em; text-decoration: none;  }
+.letterTextNormalLink:hover {font-family: 'Helvetica', Arial, 'Tahoma', sans-serif; color: #009ce4; line-height: 1.75em; text-decoration: none;}
+
+.letterTextNormalLinkColorA {font-family:  'Helvetica', Arial, 'Tahoma', sans-serif; color: #009ce4; line-height: 1.75em; text-decoration: none; }
+.letterTextNormalLinkColorA:hover {font-family: 'Helvetica CE', 'Helvetica', Arial, 'Tahoma', sans-serif; color: #393939; line-height: 1.75em; text-decoration: none;}
+
+.letterTextNormalLinkColorB {font-family:  'Helvetica', Arial, 'Tahoma', sans-serif; color: #87c80a; font-size : 0.75em; line-height: 1.75em; text-decoration: none; font-weight:bold; }
+.letterTextNormalLinkColorB:hover {font-family: 'Helvetica', Arial, 'Tahoma', sans-serif; color: #393939; line-height: 1.75em; text-decoration: none;}
+
+.letterTextSmallLink{font-family: 'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif; font-size : 0.65em; color: #929292; line-height: 1.75em; text-decoration: none; }
+.letterTextSmallLink:hover {font-family: 'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif; font-size : 0.65em; color: #373737; line-height: 1.75em; text-decoration: underline;}
+
+.letterFooterText {font-family:'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif; font-size : 0.65em; color: #FFFFFF; line-height: 16px;}
+.letterFooterMenuLink {font-family:'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif; font-size : 0.65em; color: #FFFFFF; line-height: 16px; font-weight:bold; text-decoration: none;}
+.letterFooterMenuLink:hover {font-family:'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif; font-size : 0.65em; color: #c1f0ff; line-height: 16px; font-weight:bold; text-decoration: none;}
+/* LETTER */
+
+
+/* PICTURES*/
+/* PICTURES WINDOW */ 
+/* PICTURES WINDOW */ 
+
+.logoMediCapital {position:relative; margin:auto; margin:20px 0px 0px 20px; float:left; width:389px; height:130px; background: url(Graphics/logoMediCapital.png) no-repeat;}
+.logoPictures01 {position:relative; z-index:1; margin:auto; float:left; width:391px; height:295px; background: url(Graphics/logoPictures01.png) no-repeat; border:0px solid #216781;}
+.shadowSiteDown {position:relative; margin:auto; float:left; width:984px; height:7px; background: url(Graphics/shadowSiteDown.png);}
+.shadowSiteUp { position:relative; margin:auto; float:left; margin-top:-4px; width:984px; height:8px; z-index:2; background: url(Graphics/shadowSiteUp.png);}
+.strapVertical {margin:auto; width:1px; background: url(Graphics/strapVertical.png);}
+
+
+.foldMenu {position:relative; margin:auto; margin-top:10px; padding:18px 0px 0px 20px; float:left; width:679px; height:29px; background: url(Graphics/foldMenu.png); border:0px solid}
+.foldDay { position:relative; margin:auto; float:left; width:95px; height:26px; background: url(Graphics/foldDay.png);}
+.foldWeek { position:relative; margin:auto; float:left; width:88px; height:26px; background: url(Graphics/foldWeek.png);}
+.foldMonth { position:relative; margin:auto; float:left; width:95px; height:26px; background: url(Graphics/foldMonth.png);}
+.foldDataAdressOffice { position:relative; margin:auto; margin-top:-6px; float:left; width:163px; height:18px; background: url(Graphics/foldDataAdressOffice.png);}
+.foldInformationAboutYou { position:relative; margin:auto; margin-top:-6px; float:left; width:130px; height:18px; background: url(Graphics/foldInformationAboutYou.png);}
+.foldDataLogin { position:relative; margin:auto; margin-top:-6px; float:left; width:136px; height:18px; background: url(Graphics/foldDataLogin.png);}
+.foldYourPictures { position:relative; margin:auto; margin-top:-6px; float:left; width:100px; height:18px; background: url(Graphics/foldYourPictures.png);}
+
+
+.picRegistration01 {position:relative; margin:auto; float:left; width:300px; height:363px; background: url(Graphics/registration01.png);}
+.picRegistration02 {position:relative; margin:auto; float:left; width:300px; height:363px; background: url(Graphics/registration02.png);}
+.picRegistration03 {position:relative; margin:auto; float:left; width:300px; height:363px; background: url(Graphics/registration03.png);}
+/* PICTURES*/
+ 
+/* ICON */
+.iconCrossBlue { margin:auto; margin:6px 7px 0px 2px; float: left; width:8px; height: 8px; background: url(Graphics/Icon/crossBig.png) #3399ff;}
+.iconCrossGreen { margin:auto;  margin:6px 5px 0px 0px; float: left; width:8px; height: 8px; background: url(Graphics/Icon/crossBig.png) #87c80a;}
+.iconBirdSmallGreen { margin:auto; margin:0px 8px 0px 0px; float: left; width:11px; height: 9px; background: url(Graphics/Icon/birdSmallGreen.png);}
+.iconBirdSmallBlue { margin:auto; margin:3px 8px 0px 0px; float: left; width:11px; height: 9px; background: url(Graphics/Icon/birdSmallBlue.png);}
+.iconBirdSmallOrange { margin:auto; margin:3px 8px 0px 0px; float: left; width:11px; height: 9px; background: url(Graphics/Icon/birdSmallOrange.png);}
+.iconBirdSmallWhite { margin:auto; margin:-1px 5px 0px 0px; float: left; width:15px; height:14px; background: url(Graphics/Icon/birdSmallWhite.png);}
+.iconBirdBigGreen { margin:auto; margin:6px 5px 0px 0px; float: left; width:20px; height: 16px; background: url(Graphics/Icon/birdBigGreen.png);}
+.iconCrossSmallRed { margin:auto; margin:5px 5px 0px 0px; float: left; width:11px; height:11px; background: url(iconCrossSmallRed.png);}
+.iconStar { margin:auto; margin:6px 5px 0px 0px; float: left; width:7px; height: 6px; background: url(Graphics/Icon/star.png);}
+.iconStarEmpty  { margin:auto; margin:0px 10px 0px 0px; float:left; width:22px; height:18px; background: url(Graphics/Icon/starEmpty.png);}
+.iconStarHalf  { margin:auto; margin:0px 10px 0px 0px; float:left; width:22px; height:18px; background: url(Graphics/Icon/starHalf.png);}
+.iconStarFull  { margin:auto; margin:0px 10px 0px 0px; float:left; width:22px; height:18px; background: url(Graphics/Icon/starFull.png);}
+
+.iconMyProfil  { margin:auto; margin:-3px 5px 0px 0px; float:left; width:10px; height:15px; background: url(Graphics/Icon/myProfil.png);}
+.iconMyVisit { margin:auto; margin:-2px 5px 0px 0px; float:left; width:15px; height:13px; background: url(Graphics/Icon/myVisit.png);}
+.iconRemindChemicals { margin:auto; margin:-1px 5px 0px 0px; float:left; width:15px; height:16px; background: url(Graphics/Icon/remindChemicals.png);}
+.iconOtherOptions { margin:auto; margin:0px 5px 0px 0px; float:left; width:12px; height:12px; background: url(Graphics/Icon/otherOptions.png);}
+.iconPay { margin:auto; margin:-1px 5px 0px 0px; float:left; width:9px; height:11px; background: url(Graphics/Icon/pay.png);}
+.iconOffice { margin:auto; margin:-3px 5px 0px 0px; float:left; width:14px; height:14px; background: url(Graphics/Icon/office.png);}
+.iconPatients { margin:auto; margin:-3px 5px 0px 0px; float:left; width:15px; height:15px; background: url(Graphics/Icon/patients.png);}
+.iconRelease { margin:auto; margin:-2px 5px 0px 0px; float:left; width:11px; height:14px; background: url(Graphics/Icon/release.png);}
+.iconMyTimetable { margin:auto; margin:-1px 5px 0px 0px; float:left; width:14px; height:13px; background: url(Graphics/Icon/myTimetable.png);}
+/* ICON */
+
+/* BUTTON */ 
+.buttonClose {
+cursor: pointer;
+float:right; 
+width:13px;
+height:13px;
+margin-left:6px;
+background-image: url(Graphics/Button/close.png);
+border: 0px;
+}
+
+.buttonDelete{
+cursor: pointer;
+width:82px;
+height:18px;
+background-image: url(Graphics/Button/delete.png);
+border: 0px;
+}
+.buttonCloseWindow{
+cursor: pointer;
+width:80px;
+height:18px;
+background-image: url(Graphics/Button/closeWindow.png);
+border: 0px;
+}
+.buttonRate {
+cursor: pointer;
+float:right; 
+width:82px;
+height:18px;
+background-image: url(Graphics/Button/rate.png);
+border: 0px;
+}
+.buttonFirst {
+cursor: pointer;
+float:right; 
+width:61px;
+height:18px;
+background-image: url(Graphics/Button/first.png);
+border: 0px;
+}
+.buttonLast {
+cursor: pointer;
+float:right; 
+width:60px;
+height:18px;
+background-image: url(Graphics/Button/last.png);
+border: 0px;
+}
+.buttonOptions {
+cursor: pointer;
+float:right; 
+width:13px;
+height:13px;
+background-image: url(Graphics/Button/options.png);
+border: 0px;
+}
+
+.buttonNumber {
+	margin: auto;
+	margin-top: -3px;
+	cursor: pointer;
+	display: inline;
+	width: 23px;
+	height: 21px;
+	background: url(Graphics/Button/number.png);
+	border: 0px;
+	font-size: 0.60em;
+	font-family: 'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif;
+	color: #FFFFFF;
+	line-height: 1.6em;
+}
+
+/* BUTTON */  
+ 
+
+ 
+ 
+ /* NIE RUSZA� */ 
+/* ------------------------------------------------------------------------------ */ 
+/* do skasowania, w gwt*/ 
+.inputQueryDetails {
+margin-top:1px; 
+float:left;
+width:306px; 
+height:15px;
+padding-left:3px;
+color: #565656;
+font-family: 'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif;
+background-color : #FFFFFF;
+border : 1px solid  #aaaaaa;
+}
+
+/* do skasowania, w gwt*/ 
+.textareaQueryDetails{
+padding:0px 6px 0px 3px; 
+width:300px; 
+height:170px; 
+border : 1px solid  #aaaaaa; 
+overflow:auto; 
+color: #565656; 
+font-family: 'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif;
+}
+
+/* INPUT */ 
+
+.page {
+			cursor: pointer;
+			float: left;
+			width:120px; 
+			margin: 2px 2px 2px 2px;
+			height: 23px;
+			display: block;
+			font-size: 0.90em;
+			color: #FFFFFF;
+			font-family: 'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif;
+			background-color: #3399ff;
+			border: 0px;
+			padding: 1px 0px 5px 0px;
+			vertical-align: middle;
+			text-align: super;
+}
+/* NIE RUSZA� */ 
+/* ------------------------------------------------------------------------------ */ 
+
+/*
+.tableCornerTopLeft {width:9px; height:9px; background:url(Graphics/cornerTopLeft.png) no-repeat}
+.tableTopBorder {height:8px; border-top:1px solid #bebebe}
+.tableCornerTopRight {width:9px; height:9px; background:url(Graphics/cornerTopRight.png) no-repeat}
+.tableCornerBottomLeft {width:9px; height:9px; background:url(Graphics/cornerBottomLeft.png) no-repeat}
+.tableCornerBottomRight {width:9px; height:9px; background:url(Graphics/cornerBottomRight.png) no-repeat}
+.tableMiddleBorder {padding:5px 10px 0px 10px; border-left:1px solid #bebebe; border-right:1px solid #bebebe}
+
+*/

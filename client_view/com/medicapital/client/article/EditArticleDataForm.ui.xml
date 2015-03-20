@@ -1,0 +1,162 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:i="urn:import:com.medicapital.client.ui.url"
+	xmlns:t="urn:import:com.medicapital.client.ui.text">
+	<ui:style>
+		.buttonCloseWindow {
+			cursor: pointer;
+			width: 80px;
+			height: 18px;
+			background: url(Graphics/Button/closeWindow.png);
+			border: 0px;
+		}
+		
+		.buttonDelete {
+			cursor: pointer;
+			width: 82px;
+			height: 18px;
+			background: url(Graphics/Button/delete.png);
+			border: 0px;
+		}
+		
+		.buttonSaveChange {
+			cursor: pointer;
+			width: 84px;
+			height: 18px;
+			background: url(Graphics/Button/saveChange.png);
+			border: 0px;
+		}
+	</ui:style>
+
+	<g:HTMLPanel>
+		<div style="position:relative; magin: auto; z-index:999;">
+			<table style="width:502px; height:auto;" cellpadding="0"
+				cellspacing="0">
+				<tr>
+					<td
+						style="width:7px; height:7px; background:url(Graphics/Login/cornerTopWhiteLeft.png) no-repeat"></td>
+					<td
+						style="width:490px; height:6px; border-top:1px solid #bebebe; background: #FFF"></td>
+					<td
+						style="width:7px; height:7px; background:url(Graphics/Login/cornerTopWhiteRight.png) no-repeat"></td>
+				</tr>
+				<tr>
+					<td colspan="3"
+						style="padding:5px 10px 0px 10px; background:#FFF; border-left:1px solid #bebebe; border-right:1px solid #bebebe">
+						<div class="empty" style="float:right">
+						</div>
+						<div class="empty" style="margin-top:0px; width:100%">
+							<div class="iconBirdBigBlue"></div>
+							<div class="letterTitleBig">Edytuj artykuł!
+							</div>
+						</div>
+						<div class="letterTextNormal">
+							<div class="empty" style="margin-top: 10px; width:494px;">
+								<div class="letterTextNormal">
+									<table style="width:100%" cellpadding="0" cellspacing="0">
+										<tr>
+											<td style="width:140px">
+												Opublikowany:
+											</td>
+											<td>
+												<b>
+													<g:Label ui:field="created" />
+												</b>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Imię:
+											</td>
+											<td>
+												<g:Label ui:field="firstName" />
+											</td>
+											<td>
+												Ostatnia aktualizacja:
+											</td>
+											<td>
+												<b>
+													<g:Label ui:field="updated" />
+												</b>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Nazwisko:
+											</td>
+											<td>
+												<g:Label ui:field="lastName" />
+											</td>
+										</tr>
+
+									</table>
+
+									<table
+										style="margin-top:5px; width:100%; border-top:1px dotted #bebebe;"
+										cellpadding="0" cellspacing="0">
+										<tr>
+											<td style="width:152px;">
+												Czy opublikować artykuł:
+											</td>
+											<td>
+												<g:CheckBox ui:field="published"
+													title="Zaznacz jeśli chcesz, aby artykuł był widoczny w serwisie" />
+											</td>
+										</tr>
+									</table>
+									<table
+										style="width:100%; padding-bottom:5px; border-bottom:1px dotted #bebebe;"
+										cellpadding="0" cellspacing="0">
+										<tr>
+											<td style="width:91px;">
+												Tytuł artykułu:
+											</td>
+											<td>
+												<g:TextBox width="393px" ui:field="title" />
+											</td>
+										</tr>
+									</table>
+
+								</div>
+
+
+								<g:Label text="Główne zdjęcie: " width="66px" />
+
+								<i:EditUrlResourceForm width="100px"
+									ui:field="mainPhoto" />
+
+								<div style="border:1px dotted #bebebe">
+									<t:RichTextAreaForm ui:field="body" height="400px"
+										width="430px" />
+								</div>
+
+							<g:Label text="Załączniki: " width="66px" />
+							<i:EditUrlResourceSliderForm
+								ui:field="attachmentsForm" width="50" height="75px" />
+							<g:HTML>
+								<br />
+							</g:HTML>
+
+							<g:Button ui:field="buttonSave" addStyleNames='{style.buttonSaveChange}'></g:Button>
+							<g:Button ui:field="buttonDelete" addStyleNames='{style.buttonDelete}'></g:Button>
+							<g:Button ui:field="buttonCancel" addStyleNames='{style.buttonCloseWindow}'></g:Button>
+
+
+						</div>
+		</div>
+	</td>
+	</tr>
+		<tr>
+			<td
+				style="width:7px; height:7px; background:url(Graphics/Login/cornerBottomWhiteLeft.png) no-repeat"></td>
+			<td
+				style="width:446px; height:7px; border-bottom:1px solid #bebebe; background: #FFF"></td>
+			<td
+				style="width:7px; height:7px; background:url(Graphics/Login/cornerBottomWhiteRight.png) no-repeat"></td>
+		</tr>
+	</table>
+	</div>
+
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

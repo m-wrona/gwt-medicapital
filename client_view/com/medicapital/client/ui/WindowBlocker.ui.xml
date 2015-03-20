@@ -1,0 +1,15 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<ui:style>
+		.blocerStyle {
+			background: #FFFFFF;
+			border: 1px solid;
+		}
+	</ui:style>
+
+	<g:HTMLPanel ui:field="panel" addStyleNames='{style.blocerStyle}'>
+		blokada
+	</g:HTMLPanel>
+
+</ui:UiBinder>

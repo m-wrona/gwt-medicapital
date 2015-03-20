@@ -1,0 +1,217 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:m='urn:import:com.google.gwt.maps.client'>
+
+	<ui:style>
+		.buttonComment {
+			cursor: pointer;
+			width: 72px;
+			height: 12px;
+			background: url(Graphics/Button/comment.png);
+			border: 0px;
+		}
+		
+		.buttonEvaluate {
+			cursor: pointer;
+			width: 72px;
+			height: 12px;
+			background: url(Graphics/Button/rate.png);
+			border: 0px;
+		}
+		
+		.inputVisitDetailsBorder {
+			float: left;
+			width: 230px;
+			padding-left: 3px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			font-size: 12px;
+			background-color: #FFF;
+			border: 1px solid #aaaaaa;
+		}
+		
+		.inputVisitDetailsNoBorder {
+			float: left;
+			width: 230px;
+			padding-left: 3px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			font-size: 12px;
+			background-color: #FFF;
+			border: 0px solid #aaaaaa;
+		}
+		
+		.textareaVisitDetails {
+			float: left;
+			width: 230px;
+			height: 110px;
+			padding-left: 3px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			font-size: 12px;
+			background-color: #FFF;
+			border: 1px solid #aaaaaa;
+		}
+		
+		.buttonClose {
+			cursor: pointer;
+			float: right;
+			width: 3px;
+			height: 7px;
+			background: url(Graphics/Button/close.png);
+			border: 0px;
+		}
+		
+		.buttonCancelVisit {
+			cursor: pointer;
+			width: 83px;
+			height: 12px;
+			background: url(Graphics/Button/cancelVisit.png);
+			border: 0px;
+		}
+		
+		.buttonSaveChange {
+			cursor: pointer;
+			width: 74px;
+			height: 12px;
+			background: url(Graphics/Button/saveChange.png);
+			border: 0px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<div style="position:fixed; left: 30%; top: 30%; magin: 0 auto;">
+			<table style="width:auto;" cellpadding="0" cellspacing="0">
+				<tr>
+					<td>
+						<table style="width:360px; height:auto;" cellpadding="0"
+							cellspacing="0">
+							<tr>
+								<td
+									style="width:7px; height:7px; background:url(Graphics/Login/cornerTopWhiteLeft.png) no-repeat"></td>
+								<td
+									style="width:366px; height:6px; border-top:1px solid #bebebe; background: #FFF"></td>
+								<td
+									style="width:7px; height:7px; background:url(Graphics/Login/cornerTopWhiteRight.png) no-repeat"></td>
+							</tr>
+							<tr>
+								<td colspan="3"
+									style="padding:5px 10px 0px 10px; background:#FFF; border-left:1px solid #bebebe; border-right:1px solid #bebebe">
+									<div class="empty" style="float:right">
+										<g:PushButton ui:field="buttonCloseWindow"
+											addStyleNames='{style.buttonClose}' />
+									</div>
+									<div class="empty" style="margin-top:-10px; width:100%">
+										<div class="iconBirdBigBlue"></div>
+										<div class="letterTitleBig">Szczegóły wizyty</div>
+									</div>
+
+									<div class="empty"
+										style="margin-top: 10px; width:100%; padding-bottom:5px; border-bottom:1px dotted #aeaeae">
+										<div class="empty" style="width:95px">Powód wizyty:</div>
+										<div class="empty">
+											<g:TextBox ui:field="visitTitle"
+												addStyleNames='{style.inputVisitDetailsBorder}' />
+										</div>
+									</div>
+									<div class="empty"
+										style="margin-top: 10px; width:100%; padding-bottom:5px; border-bottom:1px dotted #aeaeae">
+										<div class="empty" style="width:95px">Wizyta w dniu:</div>
+										<div class="empty" style="margin-top:1px">
+											<g:TextBox ui:field="visitDate"
+												addStyleNames='{style.inputVisitDetailsNoBorder}' />
+											<g:ListBox ui:field="cities" />
+											<g:ListBox ui:field="regions" />
+										</div>
+									</div>
+									<div class="empty"
+										style="margin-top: 10px; width:100%; padding-bottom:5px; border-bottom:1px dotted #aeaeae">
+										<div class="empty" style="width:95px">Pacjent:</div>
+										<div class="empty" style="margin-top:1px">
+											<g:Label ui:field="patient" />
+										</div>
+									</div>
+									<div class="empty"
+										style="margin-top:5px; padding-bottom:5px; width:100%;  border-bottom:1px dotted #aeaeae">
+										Lekarz:
+										<b>
+											<g:Hyperlink ui:field="visitDoctor" />
+										</b>
+										<br />
+										<div class="empty" style="width:95px">Dane gabinetu:</div>
+										<div class="empty" style="margin-top:2px">
+											<g:TextBox ui:field="visitAddress"
+												addStyleNames='{style.inputVisitDetailsNoBorder}' />
+										</div>
+									</div>
+									<div class="empty" style="margin-top:8px; width:width:333px">
+										<div class="empty" style="width:95px">
+											Opis wizyty:
+							</div>
+										<div class="empty">
+											<g:TextArea ui:field="visitDescription"
+												addStyleNames='{style.textareaVisitDetails}' />
+										</div>
+									</div>
+									<div class="empty" style="margin-top:5px; float:right; height:22px">
+										<div class="empty">
+											<g:PushButton ui:field="buttonNewEvaluation"
+												addStyleNames='{style.buttonEvaluate}' />
+										</div>
+										<div class="empty">
+											<g:PushButton ui:field="buttonShowEvaluation"
+												addStyleNames='{style.buttonComment}' />
+										</div>
+									</div>
+
+
+
+
+								</td>
+							</tr>
+							<tr>
+								<td
+									style="width:7px; height:7px; background:url(Graphics/Login/cornerBottomWhiteLeft.png) no-repeat"></td>
+								<td
+									style="width:366px; height:7px; border-bottom:1px solid #bebebe; background: #FFF"></td>
+								<td
+									style="width:7px; height:7px; background:url(Graphics/Login/cornerBottomWhiteRight.png) no-repeat"></td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<table style="margin-left:5px; width:360px; height:auto;"
+							cellpadding="0" cellspacing="0">
+							<tr>
+								<td
+									style="width:7px; height:7px; background:url(Graphics/Login/cornerTopWhiteLeft.png) no-repeat"></td>
+								<td
+									style="width:366px; height:6px; border-top:1px solid #bebebe; background: #FFF"></td>
+								<td
+									style="width:7px; height:7px; background:url(Graphics/Login/cornerTopWhiteRight.png) no-repeat"></td>
+							</tr>
+							<tr>
+								<td colspan="3"
+									style="padding:5px 10px 0px 10px; background:#FFF; border-left:1px solid #bebebe; border-right:1px solid #bebebe">
+									<m:MapWidget ui:field="googleMapWidget" />
+
+								</td>
+							</tr>
+							<tr>
+								<td
+									style="width:7px; height:7px; background:url(Graphics/Login/cornerBottomWhiteLeft.png) no-repeat"></td>
+								<td
+									style="width:366px; height:7px; border-bottom:1px solid #bebebe; background: #FFF"></td>
+								<td
+									style="width:7px; height:7px; background:url(Graphics/Login/cornerBottomWhiteRight.png) no-repeat"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+
+
+
+	</g:HTMLPanel>
+
+</ui:UiBinder>

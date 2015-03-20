@@ -1,0 +1,68 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<ui:style>
+		.buttonLogOut {
+			cursor: pointer;
+			margin: 10px 0px 0px 9px;
+			width: 65px;
+			height: 18px;
+			background: url(Graphics/Login/buttonLogOut.png);
+			border: 0px;
+		}
+	</ui:style>
+
+	<g:HTMLPanel>
+		<table style="float:left; width:195px;" cellspacing="0"
+			cellpadding="0">
+			<tr>
+				<td style="width:55px">
+					<div class="iconStar"></div>
+					<div class="letterLogin"></div>
+				</td>
+				<td style="width:135px">
+					<div class="letterTextWhite" style="margin:1px 0px 0px -18px">
+						<g:Label ui:field="login" />
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="iconStar"></div>
+					<div class="letterLastlog"></div>
+				</td>
+			</tr>
+			<tr>
+				<td style="width:55px">
+					<div class="letterHour"></div>
+				</td>
+				<td style="width:135px">
+					<div class="letterTextWhite" style="margin-top:2px">
+						<g:Label ui:field="lastLoginHour" />
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td style="width:55px">
+					<div class="letterDate"></div>
+				</td>
+				<td style="width:135px">
+					<div class="letterTextWhite" style="margin:2px 0px 0px -20px">
+						<g:Label ui:field="lastLoginDate" />
+					</div>
+				</td>
+			</tr>
+		</table>
+
+		<table style="float:left; magin-left:3px; width:82px; height:59px;"
+			cellspacing="0" cellpadding="0">
+			<tr>
+				<td>
+					<div class="picLoginOnline"></div>
+					<g:Button ui:field="buttonLoggedOut" addStyleNames='{style.buttonLogOut}'></g:Button>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+
+</ui:UiBinder>

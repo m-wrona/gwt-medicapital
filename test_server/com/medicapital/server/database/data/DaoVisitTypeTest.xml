@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<dataset>
+	<region regionId="1" name="testRegion" />
+	<city cityId="1" regionId="1" name="testCity" />
+	<localization localizationId="1" cityId="1" address="Address"
+		postalCode="12-345" />
+
+	<user userId="1" localizationId="1" login="doctor" password="testPassword"
+		firstName="firstName" lastName="lastName" eMail="address@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" userRole="Doctor" />
+	<doctor doctorId="1" userId="1" workId="workId-1234" notes="test doctor" />
+	<user userId="2" localizationId="1" login="doctor2" password="testPassword"
+		firstName="firstName" lastName="lastName" eMail="address@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" userRole="Doctor" />
+	<doctor doctorId="2" userId="2" workId="workId-1234" notes="test doctor" />
+
+	<visittype visitTypeId="1" doctorId="1" name="visitType1"
+		duration="10" description="desc1" />
+	<visittype visitTypeId="2" doctorId="1" name="visitType2"
+		duration="15" description="desc2" />
+	<visittype visitTypeId="3" doctorId="2" name="visitType3"
+		duration="15" description="desc3" />
+	<visittype visitTypeId="4" doctorId="2" name="visitType4"
+		duration="15" description="desc4" />
+</dataset>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<dataset>
+	<user userId="1" login="testUser" password="testPassword"
+		firstName="firstName" lastName="lastName" eMail="address@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" />
+	<user userId="2" login="user" password="testPassword" firstName="user"
+		lastName="user" eMail="address@medicapital.com" phoneNumber="00481234567"
+		mobile="792123456" active="true" birthDate="1984-01-02" sex="Male"
+		personalId="123-456-789" />
+	<user userId="3" login="notPublishedUser" password="testPassword"
+		firstName="notPublishedUser" lastName="notPublishedUser" eMail="address@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" />
+
+	<article articleId="1" userId="1" title="Title 1" body="body"
+		created="2010-01-01 01:02:03" lastUpdated="2010-01-10 01:02:03"
+		published="true" />
+	<article articleId="2" userId="1" title="Title 2" body="body"
+		created="2010-01-01 01:02:03" lastUpdated="2010-01-10 01:02:03"
+		published="true" />
+	<article articleId="3" userId="2" title="Title 3" body="body"
+		created="2010-01-01 01:02:03" lastUpdated="2010-01-10 01:02:03"
+		published="true" />
+	<article articleId="4" userId="3" title="not published" body="body"
+		created="2012-01-01 01:02:03" lastUpdated="2012-01-10 01:02:03"
+		published="false" />
+</dataset>

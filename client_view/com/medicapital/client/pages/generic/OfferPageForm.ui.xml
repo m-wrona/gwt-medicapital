@@ -1,0 +1,29 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<g:VerticalPanel>
+		<g:HTML>
+			<div class="letterTitleBig">
+				<div class="iconBirdBigBlue"></div>
+				Oferta
+			</div>
+
+			<div class="letterTextNormal">
+				<div class="empty" style="margin-top:10px">
+					nasze oferty
+			 	 	</div>
+			</div>
+			<br />
+			<div class="letterTitleBig">
+				<div class="iconBirdBigBlue"></div>
+				Bezpieczeństwo
+			</div>
+
+			<div class="letterTextNormal">
+				<div class="empty" style="margin-top:10px">
+					informacje o bezpieczeństwie serwisu
+			 	 	</div>
+			</div>
+		</g:HTML>
+	</g:VerticalPanel>
+</ui:UiBinder>

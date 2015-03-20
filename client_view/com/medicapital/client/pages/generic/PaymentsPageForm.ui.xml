@@ -1,0 +1,71 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<g:VerticalPanel>
+		<g:HTMLPanel>
+			<div class="dataTitle">
+				<div class="empty">
+					<div class="letterTitleBig">
+						<div class="iconBirdBigBlue"></div>
+						Opcja p³atna
+					</div>
+				</div>
+			</div>
+			<div class="dataText">
+				<div class="letterTextNormal">
+					<div class="empty" style="width:653px">
+						Chcesz otrzymywaæ wiadomo¶ci SMS na swój telefon komórkowy z
+						aktualn± list± przyjmowanych przez Ciebie leków?
+						<br />
+						<span>Wykup pakiet SMS za jedyne</span>
+						<div class="letterTextNormalColorA">9,99 z³ + 22% VAT (12,20 z³).</div>
+						<br />
+						Wiadomo¶ci tekstowe SMS bêdziesz otrzymywaæ zgodnie z wype³nion±
+						przez Ciebie list± przyjmowanych w danym okresie leków.
+						SMS o tre¶ci np.
+						<b>Aspiryna 1 szt, Rutinoscorbin 4 szt, Stadol 25 ml</b>
+						otrzymasz:
+						<br />
+						<div class="iconBirdSmallGreenOptionsPay"></div>
+						rano o godzinie ok 8:00.,
+						<br />
+						<div class="iconBirdSmallGreenOptionsPay"></div>
+						popo³udniu o godzinie ok. 12:00,
+						<br />
+						<div class="iconBirdSmallGreenOptionsPay"></div>
+						wieczorem o godzinie ok. 20:00.
+						<br />
+						<br />
+						<b>Co nale¿y zrobiæ, aby uaktywniæ pakiet SMS?</b>
+						<br />
+						Nale¿y wp³aciæ na nasze konto bankowe okre¶lon± sumê, podaj±c w
+						tytule: "SMS oraz swój login" np. "SMS Kowalski".
+						<br />
+						Dane konta bankowego:
+						<br />
+						<br />
+						Bank: MBank
+						<br />
+						Numer konta: 12345678910
+						<br />
+						ul. Jagodzianka 21/3
+						<br />
+						54-403 Wroc³aw
+						<br />
+						<br />
+						Pakiet SMS jest wa¿ny przez miesi±c czasu.
+						<br />
+						Us³uga zostanie w³±czona w ci±gu
+						<b>24 godzin</b>
+						od momentu wp³acenia pieniêdzy na konto bankowe.
+						<br />
+						Status us³ugi sprawdzisz w dziale "Aktualna lista leków".
+					</div>
+					<div class="picSitePay">
+						<div class="picSitePayPrice"></div>
+					</div>
+				</div>
+			</div>
+		</g:HTMLPanel>
+	</g:VerticalPanel>
+</ui:UiBinder>

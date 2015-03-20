@@ -1,0 +1,15 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:m="urn:import:com.medicapital.client.ui.generic">
+	<ui:style>
+		
+	</ui:style>
+	<g:VerticalPanel>
+		<g:HorizontalPanel ui:field="urlResourcePanel" />
+		<m:PagingForm ui:field="pagingForm" />
+		<g:HorizontalPanel>
+			<g:Button ui:field="buttonSave">Dodaj</g:Button>
+			<g:Button ui:field="buttonDelete">Skasuj</g:Button>
+		</g:HorizontalPanel>
+	</g:VerticalPanel>
+</ui:UiBinder> 

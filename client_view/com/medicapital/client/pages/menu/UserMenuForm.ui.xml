@@ -1,0 +1,25 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<g:HorizontalPanel>
+		<g:MenuBar autoOpen="true" animationEnabled="true">
+			<g:MenuItem ui:field="myHomePage" text="Strona startowa" />
+			<g:MenuItem ui:field="calendar" text="Kalendarz" />
+			<g:MenuItem ui:field="visitCategoty" text="Wizyty">
+				<g:MenuBar autoOpen="true" animationEnabled="true">
+					<g:MenuItem ui:field="userVisits" text="Historia" />
+					<g:MenuItem ui:field="newVisit" text="Umów" />
+				</g:MenuBar>
+			</g:MenuItem>
+			<g:MenuItem ui:field="patientDocumentation" text="Historia chorób" />
+			<g:MenuItem ui:field="searchArticles" text="Artykuły" />
+			<g:MenuItem ui:field="profileCategoty" text="Profil">
+				<g:MenuBar autoOpen="true" animationEnabled="true">
+					<g:MenuItem ui:field="userProfile" text="Dane osobiste" />
+				</g:MenuBar>
+			</g:MenuItem>
+		</g:MenuBar>
+	</g:HorizontalPanel>
+
+
+</ui:UiBinder>

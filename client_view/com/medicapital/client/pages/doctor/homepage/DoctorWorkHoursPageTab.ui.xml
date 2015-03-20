@@ -1,0 +1,15 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:w="urn:import:com.medicapital.client.doctor.work">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<w:WorkHoursFilterForm ui:field="filterWorkHours" />
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<w:WorkHoursListForm ui:field="workHoursList" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

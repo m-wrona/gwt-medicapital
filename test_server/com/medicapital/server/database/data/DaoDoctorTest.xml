@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<dataset>
+	<region regionId="1" name="testRegion" />
+	<city cityId="1" regionId="1" name="testCity" />
+	<localization localizationId="1" cityId="1" address="Address"
+		postalCode="12-345" />
+
+	<user userId="1" localizationId="1" login="testDoctor" password="testPassword"
+		firstName="firstName" lastName="lastName" eMail="address@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" userRole="Doctor" />
+	<doctor doctorId="1" userId="1" workId="workId-1234" notes="test doctor"
+		averageEvaluation="1.0" />
+
+	<user userId="2" login="updatedDoctor" password="testPassword"
+		firstName="a" lastName="a" eMail="address@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" userRole="Doctor" />
+	<doctor doctorId="2" userId="2" workId="workId-1234" notes="test doctor"
+		averageEvaluation="2.0" />
+
+	<user userId="3" login="deleteByLogin" password="testPassword"
+		firstName="a" lastName="a" eMail="address@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" userRole="Doctor" />
+	<doctor doctorId="3" userId="3" workId="workId-1234" notes="test doctor"
+		averageEvaluation="3.0" />
+
+	<user userId="4" login="deleteById" password="testPassword"
+		firstName="a" lastName="a" eMail="address@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" userRole="Doctor" />
+	<doctor doctorId="4" userId="4" workId="workId-1234" notes="test doctor"
+		averageEvaluation="4.0" />
+</dataset>

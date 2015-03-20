@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Label>Typ wizyty: </g:Label>
+		<g:TextBox ui:field="name"
+			title='Nazwa wizyty/badania, jaka jest dostępna dla pacjentów' />
+		<g:Label>Czas trwania: </g:Label>
+		<g:ListBox ui:field="duration" title='Szacowany czas trwania wizyty w minutach' />
+		<g:Label>Opis: </g:Label>
+		<g:RichTextArea ui:field="description" />
+		<g:Button ui:field="buttonAdd">Zapisz</g:Button>
+		<g:Button ui:field="buttonDelete" visible="false">Skasuj</g:Button>
+		<g:Button ui:field="buttonCancel">Zamknij</g:Button>
+	</g:HTMLPanel>
+</ui:UiBinder> 

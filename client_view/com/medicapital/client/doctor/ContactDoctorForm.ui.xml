@@ -1,0 +1,25 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Label>Address:</g:Label>
+		<g:Label ui:field="address"/>
+		<g:Label>Kod pocztowy:</g:Label>
+		<g:Label ui:field="postalCode"/>
+		<g:Label>Województwo:</g:Label>
+		<g:ListBox ui:field="regions"/>
+		<g:Label>Miasto:</g:Label>
+		<g:ListBox ui:field="cities"/>
+		<br/>
+		<g:Label>Telefon:</g:Label>
+		<g:Label ui:field="phoneNumber"/>
+		<g:Label>Komórka:</g:Label>
+		<g:Label ui:field="mobileNumber"/>
+		<br/>
+		<g:Label>E-mail:</g:Label>
+		<g:Label ui:field="eMail"/>
+	</g:HTMLPanel>
+</ui:UiBinder> 

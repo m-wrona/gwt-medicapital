@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<dataset>
+	<user userId="2" login="testUser" password="testPassword"
+		firstName="firstName" lastName="lastName" eMail="testUser@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" userRole="User"/>
+
+	<user userId="1" localizationId="1" login="testDoctor" password="testPassword"
+		firstName="firstName" lastName="lastName" eMail="testDoctor@medicapital.com"
+		phoneNumber="00481234567" mobile="792123456" active="true" birthDate="1984-01-02"
+		sex="Male" personalId="123-456-789" userRole="Doctor" />
+	<doctor doctorId="1" userId="1" workId="workId-1234" notes="test doctor" />
+</dataset>

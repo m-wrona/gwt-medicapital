@@ -1,0 +1,62 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="officeData">
+			<div class="letterTextNormal">
+
+				<div class="empty"
+					style="float:right; margin-top:-50px; padding-left:20px; width:386px">
+					<div class="empty" style="width:100%">
+						<div class="empty" style="margin-left:10px; width:88px">
+							<div class="cornerTopLeft"></div>
+							<div class="cornerTopMiddle" style="width:62px"></div>
+							<div class="cornerTopRight"></div>
+							<div class="cornerMiddleSmallLeft" style="height:12px"></div>
+							<div class="foldCard"></div>
+
+							<div class="cornerMiddleSmallRight" style="height:12px"></div>
+						</div>
+					</div>
+					<div class="empty" style="margin-top:-2px">
+						<div class="cornerTopLeft"></div>
+						<div class="cornerTopMiddle" style="width:360px"></div>
+						<div class="cornerTopRight"></div>
+						<div class="cornerMiddleSmallLeft" style="height:188px"></div>
+						<div class="empty"
+							style="padding:5px 5px 0px 10px; width:357px; min-height:189px">
+
+							<div class="empty" style="width:223px; border:0px solid">
+								<div class="empty" style="width:68px">Imię:</div>
+								<g:Label ui:field="firstName" />
+								<div class="empty" style="width:68px">Nazwisko:</div>
+								<g:Label ui:field="lastName" />
+								<div class="empty" style="width:68px">Numer ID:</div>
+								<g:Label ui:field="workId" />
+								<div class="empty" style="margin-top:8px; width:100%">
+									<b>Specjalizacje:</b>
+								</div>
+								<g:Label ui:field="specializations" />
+							</div>
+							<div class="profilDoctorPictures">
+								<g:Image ui:field="profileImage" />
+							</div>
+						</div>
+
+						<div class="cornerMiddleSmallRight" style="height:188px"></div>
+						<div class="empty" style="margin-top:-6px">
+							<div class="cornerBottomLeft"></div>
+							<div class="cornerBottomMiddle" style="width:360px"></div>
+							<div class="cornerBottomRight"></div>
+						</div>
+					</div>
+				</div>
+				<g:HTML ui:field="notes" />
+			</div>
+		</div>
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

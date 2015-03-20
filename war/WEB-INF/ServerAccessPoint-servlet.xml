@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context.xsd"
+	default-lazy-init="true">
+
+	<!-- mapping between RPC messages and command executors -->
+	<bean id="urlMapping" class="org.gwtwidgets.server.spring.GWTHandler">
+		<property name="mappings">
+			<map>
+				<entry key="/LoginData.rpc" value-ref="loginCommandExecutor" />
+				<entry key="/User.rpc" value-ref="userCommandExecutor" />
+				<entry key="/Doctor.rpc" value-ref="doctorCommandExecutor" />
+				<entry key="/City.rpc" value-ref="cityCommandExecutor" />
+				<entry key="/Hobby.rpc" value-ref="hobbyCommandExecutor" />
+			</map>
+		</property>
+	</bean>
+
+	<!-- handling requests related with images  -->
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<value>
+				/MediCapital/CommandService/DoctorImage=imageHandler
+            </value>
+		</property>
+	</bean>
+
+	<!-- command executors -->
+	<bean id="userCommandExecutor" class="com.medicapital.server.access.UserCommandExecutor" />
+	<bean id="doctorCommandExecutor" class="com.medicapital.server.access.DoctorCommandExecutor" />
+	<bean id="hobbyCommandExecutor" class="com.medicapital.server.access.HobbyCommandExecutor" />
+	<bean id="cityCommandExecutor" class="com.medicapital.server.access.CityCommandExecutor" />
+	<bean id="loginCommandExecutor" class="com.medicapital.server.access.LoginAccess" />
+	<bean id="imageHandler" class="com.medicapital.server.access.ImageService" />
+
+	<!-- DAO access -->
+	<bean id="daoUser" class="com.medicapital.server.database.jdbc.JDBCUser">
+		<property name="dataSource" ref="dataBaseSource" />
+	</bean>
+	<bean id="daoDoctor" class="com.medicapital.server.database.jdbc.JDBCDoctor">
+		<property name="dataSource" ref="dataBaseSource" />
+	</bean>
+	<bean id="daoCity" class="com.medicapital.server.database.jdbc.JDBCCity">
+		<property name="dataSource" ref="dataBaseSource" />
+	</bean>
+	<bean id="daoHobby" class="com.medicapital.server.database.jdbc.JDBCHobby">
+		<property name="dataSource" ref="dataBaseSource" />
+	</bean>
+	<bean id="daoLogin" class="com.medicapital.server.database.jdbc.JDBCLogin">
+		<property name="dataSource" ref="dataBaseSource" />
+	</bean>
+
+	<!-- data base resource management -->
+	<bean id="dataBaseSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/medicapital?characterEncoding=utf8" />
+		<property name="username" value="root" />
+		<property name="password" value="wrona" />
+	</bean>
+
+</beans>
+                    

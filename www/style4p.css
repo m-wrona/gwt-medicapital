@@ -1,0 +1,509 @@
+
+/* STYLE BUTTONÓW I INNYCH PZYCISKÓW NA KONIEC SKASOWAÆ !!!/
+
+
+/* -------------------UPORZADKOWANE------------------ */
+body {margin:auto; background: #FFFFFF; }
+#container{position:relative; margin:auto; width:100%; height:auto!important; height:100%; min-height:100%;}
+#contentContainer {position:relative; margin:auto; height: 100%; width: 100%;}
+
+.contentHead {position:relative; margin:auto; width:100%; height:150px; }
+.headMenu {position:relative; margin:auto; width:100%; height:150px; background: url(Graphics/groundHead.png);}
+.headMenuInside {position:relative; margin:auto; width:975px; height:150px; border:0px solid #216781;}
+.menuHeadBin {position:relative; margin:auto; margin-left:20px; float:left;}
+.headMenuSeparator1 {position:relative; margin:auto; float:left; margin:3px 0px 0px 15px; width:1px; height:10px; background: #3e3e3e; border:0px solid #216781;}
+.headMenuSeparator2 {position:relative; margin:auto; float:left; margin-top:3px; width:1px; height:10px; background: #171717; border:0px solid #216781;}
+
+.contentLogo {position:relative; margin:auto; width:100%; height:284px; margin-top:-40px; border:0px solid;}
+.logo {position:relative; margin:auto; width:100%; height:650px; border:0px solid #c00000}
+.logoCorner {position:relative; margin:auto; }
+.logoInside {position:relative; margin:auto; top:-3px; width:975px; height:284px; border:1px dashed #dbdbdb; border-top:0px; border-bottom:0px;}
+.logoMediCapital {position:relative; margin:auto; margin:15px 0px 0px 15px; float:left; width:280px; height:59px; background: url(Graphics/logoMediCapital.png); }
+
+.contentCenter {position:relative; margin:auto; width:100%; }
+.centerMenu {position:relative; margin:auto; width:100%; height:41px; background: url(Graphics/groundMenuProfil.png); }
+.centerMenuInside {position:relative; margin:auto; width:975px;}
+.menuCenterBin {position:relative; margin:auto; float:left; padding:8px 0px 15px 0px; margin-top:4px;}
+
+.centerData {position:relative; margin:auto; width:100%; min-height:489px; background: url(Graphics/groundCenter.png) repeat-x; border:0px solid #216781;}
+.centerDataInside {position:relative; margin:auto; padding-top:15px; width:975px; min-height:489px; height:auto!important; background:#FFF; border:1px dashed #dbdbdb; border-top:0px; border-bottom:0px;}
+.data {position:relative; margin:auto; width:955px; height:auto!important;}
+
+.contentFooter {position:relative; margin:auto; clear:both; width:100%; height:200px; background: url(Graphics/groundFooter.png);}
+.footerData {position:relative; margin:auto; width:975px; height:200px;}
+.footerDataInside {position:relative; margin:auto; margin:20px 0px 0px 15px; float:left; border:0px solid #216781;}
+.footerBin {position:relative; display:block; margin:auto; padding-left:3px; float:left; min-width:100%; border-bottom:1px dotted #444444;}
+.footerSeparator1 {position:relative; margin:auto; margin-top:10px; float:left; width:1px; height:175px; background: #3e3e3e; border:0px solid #216781;}
+.footerSeparator2 {position:relative; margin:auto; margin-top:10px; float:left; width:1px; height:175px; background: #171717; border:0px solid #216781;}
+
+.empty { position:relative; margin:auto; float:left; }
+
+/* G£ÓWNE ELEMENTY STRONY */
+.windowGreen {position:relative; margin:auto; margin:-340px 2px 0px 0px; padding:15px 5px 5px 15px; float:right; width:286px; height:99px; z-index:3; background: url(Graphics/windowGreen.png);}
+.tableButtons { position:relative; margin:auto; margin-top:-1px; float:left; }
+
+
+/* G£ÓWNE ELEMENTY STRONY */
+
+
+
+
+
+/*----------------------------------------------------*/
+
+/* PICTUERS */
+.cornerTopHeadLeft {position:relative; margin:auto; float:left; width:13px; height:15px; z-index:3; background: url(Graphics/cornerTopHeadLeft.png);}
+.cornerTopHeadRight {position:relative; margin:auto; float:left; width:13px; height:15px; z-index:3; background: url(Graphics/cornerTopHeadRight.png);}
+
+.picForgotPassword, .picDetailsVisit, .picDetailsQuery {position:absolute; margin:auto; margin:-20px 0px 0px -40px; float:left; width:100px; height:251px; z-index:2; background: url(detailsPictures01.png);}
+/* PICTUERS */
+
+
+/* INNE */ 
+.iconBirdBigBlue { margin:auto; margin:4px 8px 0px 0px; float: left; width:20px; height: 16px; background: url(Graphics/Icon/birdBigBlue.png);}
+.iconBirdBigGreen { margin:auto; margin:6px 5px 0px 0px; float: left; width:20px; height: 16px; background: url(Graphics/Icon/birdBigGreen.png);}
+/* INNE */ 
+
+
+/* LETTER */ 
+.letterTitleBig {font-family: 'Helvetica',  Arial, 'Tahoma', sans-serif;  font-size: 14px; color:#383838; line-height: 23px; font-weight:bold;}
+
+.letterTextWhite {font-family: 'Helvetica',  Arial, 'Tahoma', sans-serif;  font-size: 11px; color:#FFF; line-height: 23px; font-weight:bold;}
+.letterTextGrey {font-family: 'Helvetica',  Arial, 'Tahoma', sans-serif;  font-size: 11px; color:#9f9f9f; line-height: 23px; font-weight:bold;}
+
+.letterTextDate {font-family: 'Helvetica',  Arial, 'Tahoma', sans-serif;  font-size: 11px; color:#000; line-height: 23px; font-weight:bold;}
+
+
+.letterTextNormal {font-family:  'Helvetica',  Arial, 'Tahoma', sans-serif; font-size : 12px; color: #393939; line-height: 23px; text-align:justify;}
+
+.letterTextHelp {font-family: tahoma,arial,sans-serif; font-size: 11px; color: #393939; font-weight:bold; line-height: 23px;}
+
+.letterTextBlue {font-family: 'Helvetica',  Arial, 'Tahoma', sans-serif; font-size: 14px; color: #19a2c8; line-height: 23px;}
+
+.letterFooterTitle {font-family: tahoma,arial,sans-serif; font-size: 12px; font-weight:bold; color: #cecece; line-height: 23px;}
+.letterFooter {font-family: tahoma,arial,sans-serif; sans-serif; font-size:11px; color:#858585; line-height: 20px;}
+.linkFooter {font-family: tahoma,arial,sans-serif; font-size: 11px; color:#858585; text-decoration: none; line-height: 23px;}
+.linkFooter:hover {font-family: tahoma,arial,sans-serif; font-size:11px; color: #bfb48f; text-decoration: underline;}
+
+.linkTitle {font-family: tahoma,arial,sans-serif; font-size: 12px; color:#393939; text-decoration: none; line-height: 23px; font-weight:bold;}
+.linkTitle:hover {font-family: tahoma,arial,sans-serif; font-size:12px; color: #bfb48f; line-height: 23px; font-weight:bold;}
+
+/* -------------------UPORZADKOWAC------------------ */ 
+
+
+	/* czcionki */ 
+.linkHeadMenu {font-family: Arial; font-size: 12px; color: #969696; font-weight:bold; text-decoration: none;}
+.linkHeadMenu:hover {font-family: Arial; font-size:12px; color:#FFF; text-decoration: none;}
+
+.linkCenterMenu {font-family: Arial; font-size: 12px; color: #969696; padding:8px 35px 15px 31px; font-weight:bold; text-decoration: none;}
+.linkCenterMenu:hover {font-family: Arial; font-size:12px; color:#19a2c8; padding:8px 35px 15px 31px; background:#FFF; font-weight:bold; text-decoration: none;}
+
+.linkDataTop {font-family: tahoma,arial,sans-serif; font-size: 11px; color:#19a2c8; text-decoration: none;}
+.linkDataTop:hover {font-family: tahoma,arial,sans-serif; font-size:11px; color: #969696; text-decoration: underline;}
+.textDataTop {display:inline; font-family: tahoma,arial,sans-serif; font-size: 11px; color: #878787; line-height: 23px;}
+
+.textData {font-family: tahoma,arial,sans-serif; font-size: 13px; color: #393939; line-height: 23px;}
+
+
+	/* czcionki */ 
+/* Czesci strony */
+.centerQuickSearch {position:relative; margin:auto; margin:9px 5px 0px 0px; float:right; height:20px;}
+.otherHelp {position:absolute; margin:auto; margin:-5px 0px 0px -9px; float:left; width:14px; height:14px; z-index:3; background: url(Graphics/otherHelp.png);}
+
+
+	/* Inne */
+.strapBlack {position:relative; margin:auto; width:100%; height:1px; background: #000;}
+
+.cornerTopLeft {position:relative; margin:auto; float:left; width:9px; height:9px; background: url(Graphics/cornerTopLeft.png);}
+.cornerTopMiddle {position:relative; margin:auto; float:left; height:8px; border-top:1px solid #bebebe;}
+.cornerTopRight {position:relative; margin:auto; float:left; width:9px; height:9px; background: url(Graphics/cornerTopRight.png);}
+.cornerMiddle {position:relative; margin:auto; float:left; padding-left:9px; height:auto; border:1px solid #bebebe; border-top:0px; border-bottom:0px;}
+.cornerBottomLeft {position:relative; margin:auto; float:left; width:9px; height:9px; background: url(Graphics/cornerBottomLeft.png);}
+.cornerBottomMiddle {position:relative; margin:auto; float:left; height:8px; border-bottom:1px solid #bebebe;}
+.cornerBottomRight {position:relative; margin:auto; float:left; width:9px; height:9px; background: url(Graphics/cornerBottomRight.png);}
+
+.inputCornerLeft {position:relative; margin:auto; margin:0px; float:left; width:4px; height:21px; background: url(Graphics/inputCornerLeft.png); }
+.inputCornerRight {position:relative; margin:auto; margin:0px; float:left; width:4px; height:21px; background: url(Graphics/inputCornerRight.png); }
+
+
+
+.buttonQuickSearch{		
+margin:0px;	
+cursor: pointer;
+float: left;
+width:23px;
+height:21px;
+background: url(Graphics/buttonSearch.png);
+border: 0px;
+}
+
+
+.inputQuickSearch {
+margin:0px;
+float:left;
+width:140px; 
+height:19px; 
+padding-left:2px;
+color: #000;
+line-height: 17px;
+font-size:12px; 
+font-family: tahoma,arial,sans-serif; sans-serif;
+background-color : #FFFFFF;
+border : 0px;
+}
+
+.inputNewsletter {
+float:left;
+width:215px; 
+height:19px;
+padding-left:1px;
+color: #000;
+font-size:12px; 
+font-family: tahoma,arial,sans-serif; sans-serif;
+background : #FFFFFF;
+border : 0px ;
+}
+.buttonNewsletterApprove{		
+margin:0px;	
+cursor: pointer;
+float: left;
+width:23px;
+height:21px;
+background: url(Graphics/buttonApprove.png);
+border: 0px;
+}
+
+
+/* stare  skasowac pozniej, co niepotrzebne*/ /* stare  skasowac pozniej, co niepotrzebne*/ /* stare  skasowac pozniej, co niepotrzebne*/ 
+/* stare  skasowac pozniej, co niepotrzebne*/ /* stare  skasowac pozniej, co niepotrzebne*/ /* stare  skasowac pozniej, co niepotrzebne*/ 
+/* stare  skasowac pozniej, co niepotrzebne*/ /* stare  skasowac pozniej, co niepotrzebne*/ /* stare  skasowac pozniej, co niepotrzebne*/ 
+/* .menuSite {position:relative; margin:auto; margin:100px 0px 0px 22px; float:left; width:644px; overflow:auto; border:0px solid #216781;}
+.menuUserFirst {position:relative; margin:auto; padding-top:10px; width:984px; height:21px; z-index:1; background:url(Graphics/groundMenuUser.png); border:0px solid}
+.menuUserSecond {position:relative; margin:auto; width:956px; height:auto; border:0px solid #216781;}
+.center {position:relative; margin:auto; width:984px; height:auto; border:0px solid #216781;}
+.centerLogin {position:relative; margin:auto; width:984px; height:auto; border:0px solid #216781;}
+.dataShadow {position:relative; margin:auto; margin:10px 0px 0px 2px; float:left; width:956px; height:auto; border:0px solid #216781;}
+.dataTitle {position:relative; margin:auto;  margin:0px 0px 0px 10px; clear:both; width:942px; height:25px; border:0px solid #216781;}
+.dataText {position:relative; margin:auto; margin:10px 0px 0px 10px; width:942px; overflow:none; float:left; height:auto; border:0px solid #216781;}
+.dataSlider {position:relative; margin:auto; padding-top:10px; width:942px; overflow:auto; height:auto; border:0px solid #216781;}
+
+.emptyCenter { position:relative; margin:auto; border:0px solid #216781;}
+*/
+
+.button{			
+			cursor: pointer;
+			float: left;
+			width:100px;
+			padding:3px 0px 2px 0px;			
+			display: block;
+			color: #FFFFFF;
+			font: 12px 'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif;
+			background-color: #3399ff;
+			border: 0px;
+
+}
+
+
+
+
+
+/* ICON */ 
+.icon1  { margin:auto; margin:0px 10px 0px 0px; float:left; width:20px; height:20px; background: url(1.png);}
+.icon2  { margin:auto; margin:0px 10px 0px 0px; float:left; width:20px; height:20px; background: url(2.png);}
+.icon3  { margin:auto; margin:0px 10px 0px 0px; float:left; width:20px; height:20px; background: url(3.png);}
+.icon4  { margin:auto; margin:0px 10px 0px 0px; float:left; width:20px; height:20px; background: url(4.png);}
+.icon5  { margin:auto; margin:0px 10px 0px 0px; float:left; width:20px; height:20px; background: url(5.png);}
+.icon6  { margin:auto; margin:0px 10px 0px 0px; float:left; width:20px; height:20px; background: url(6.png);}
+.icon7  { margin:auto; margin:0px 10px 0px 0px; float:left; width:20px; height:20px; background: url(7.png);}
+.icon8  { margin:auto; margin:0px 10px 0px 0px; float:left; width:20px; height:20px; background: url(8.png);}
+.icon9  { margin:auto; margin:0px 10px 0px 0px; float:left; width:20px; height:20px; background: url(9.png);}
+/* ICON */ 
+ 
+ 
+ /* Rejestracja */ 
+.iconRegistrationBirdSmallGreen { margin:auto; margin:6px 8px 0px 0px; float: left; width:11px; height: 9px; background: url(iconBirdSmallGreen.png);}
+.iconRegistrationBirdSmallBlue { margin:auto; margin:6px 8px 0px 0px; float: left; width:11px; height: 9px; background: url(iconBirdSmallBlue.png);}
+.iconRegistrationBirdSmallOrange { margin:auto; margin:6px 8px 0px 0px; float: left; width:11px; height: 9px; background: url(iconBirdSmallOrange.png);}
+
+.registrationCategory {position:relative; margin:auto; clear: both; float: left; width:100px; border:0px solid}
+.registrationField {position:relative; margin:auto; margin-top:2px; float: left; width:212px; text-align:center; border:0px solid}
+.registrationQuestion {position:relative; margin:auto; margin-top:10px; clear: both; float: left; width:100%; border:0px solid}
+.registrationEnquiry {position:relative; margin:auto; float: left; width:130px; border:0px solid}
+.picRegistration01 { position:relative; margin:auto; margin-left:30px; float:left; width:259px; height:378px; background: url(picSitePay.png);}
+.registrationCheckbox {
+float:left;
+color: #565656;
+border : 0px solid  #aaaaaa;
+}
+
+.inputRegistration {
+float:left;
+width:206px; 
+height:15px;
+padding-left:3px;
+color: #565656;
+font-family: 'Helvetica CE', 'Helvetica', Arial, 'Tahoma', sans-serif;
+background-color : #FFFFFF;
+border : 1px solid  #aaaaaa;
+}
+
+.inputRegistrationSubmit {
+cursor:pointer;
+float:left;
+height:19px;
+font-size : 0.75em;
+color: #FFFFFF;
+font-family: 'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif;
+background-color : #565656;
+border : 0px;
+padding: 0px 5px 3px 5px;
+vertical-align:middle;
+text-align: super;
+}
+
+.inputRegistrationSelect {
+float:left;
+width:212px; 
+color: #343434;
+font-family: 'Helvetica CE', 'Helvetica', Arial, 'Tahoma', sans-serif;
+background-color : #FFFFFF;
+border : 1px solid #aaaaaa;
+vertical-align:middle;
+text-align: super;
+}
+.inputRegistrationBox {
+float:left;
+border : 1px solid #aaaaaa;
+vertical-align:middle;
+text-align: super;
+}
+
+
+/* Rejestracja */ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* HISTORIA WIZYT */ 
+.visitTitle {margin:auto; padding-top:2px; float: left; height:22px; text-align:center; background:url(Graphics/groundGray.png); border-bottom:1px dotted #aeaeae;}
+.visitTitleSeparator {margin:auto; float: left; width:1px; height:25px; border:1px solid #c8c8c8; border-top:0px; border-bottom:0px}
+.visitSeparator {margin:auto; float: left; width:1px; height:45px; border:1px solid #c8c8c8; border-top:0px; border-bottom:0px}
+.visitCategory {margin:auto; float: left; min-height:44px; border-bottom:1px dotted #aeaeae; text-align:center;}
+.visitCategoryOld {
+	margin: auto;
+	padding-top:3px;
+	float: left;
+	height: 44px;
+	text-align: center;	
+	border-bottom: 1px dotted #AEAEAE;
+	background: #f6f6f6;
+}
+
+.inputVisitDetails {
+margin-top:1px; 
+float:left;
+width:257px; 
+height:15px;
+padding-left:3px;
+color: #565656;
+font-family: 'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif;
+background-color : #FFFFFF;
+border : 1px solid  #aaaaaa;
+}
+.textareaVisitDetails {
+margin-top:1px; 
+float:left;
+width:257px; 
+height:110px;
+padding-left:3px;
+color: #565656;
+font-family: 'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif;
+background-color : #FFFFFF;
+border : 1px solid  #aaaaaa;
+}
+/* HISTORIA WIZYT */ 
+
+
+
+/* INPUT */ 
+
+/* do skasowania, w gwt*/ 
+.inputQueryDetails {
+margin-top:1px; 
+float:left;
+width:306px; 
+height:15px;
+padding-left:3px;
+color: #565656;
+font-family: 'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif;
+background-color : #FFFFFF;
+border : 1px solid  #aaaaaa;
+}
+
+/* do skasowania, w gwt*/ 
+.textareaQueryDetails{
+padding:0px 6px 0px 3px; 
+width:300px; 
+height:170px; 
+border : 1px solid  #aaaaaa; 
+overflow:auto; 
+color: #565656; 
+font-family: 'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif;
+}
+
+/* INPUT */ 
+
+
+
+
+/* BUTTON */ 
+.buttonClose {
+cursor: pointer;
+float:right; 
+width:13px;
+height:13px;
+background: url(Graphics/Button/close.png);
+border: 0px;
+}
+.buttonDetails{
+cursor: pointer;
+width:82px;
+height:18px;
+background: url(Graphics/Button/details.png);
+border: 0px;
+}
+.buttonNext{
+cursor: pointer;
+width:65px;
+height:18px;
+background: url(Graphics/Button/next.png);
+border: 0px;
+}
+.buttonPrevious{
+cursor: pointer;
+width:72px;
+height:18px;
+background: url(Graphics/Button/previous.png);
+border: 0px;
+}
+
+.buttonComment{
+cursor: pointer;
+width:82px;
+height:18px;
+background: url(Graphics/Button/comment.png);
+border: 0px;
+}
+.buttonDelete{
+cursor: pointer;
+width:82px;
+height:18px;
+background: url(Graphics/Button/delete.png);
+border: 0px;
+}
+.buttonDeleteAll{
+cursor: pointer;
+width:100px;
+height:18px;
+background: url(Graphics/Button/deleteAll.png);
+border: 0px;
+}
+.buttonSendPassword{
+cursor: pointer;
+width:76px;
+height:18px;
+background: url(Graphics/Button/sendPassword.png);
+border: 0px;
+}
+.buttonCloseWindow{
+cursor: pointer;
+width:80px;
+height:18px;
+background: url(Graphics/Button/closeWindow.png);
+border: 0px;
+}
+.buttonCancelVisit{
+cursor: pointer;
+width:93px;
+height:18px;
+background: url(Graphics/Button/cancelVisit.png);
+border: 0px;
+}
+.buttonSaveChange{
+cursor: pointer;
+width:84px;
+height:18px;
+background: url(Graphics/Button/saveChange.png);
+border: 0px;
+}
+.buttonNumber{
+margin:auto; 
+cursor: pointer;
+display: inline;
+width:23px;
+height:21px;
+background: url(Graphics/Button/number.png);
+border: 0px;
+font-size: 0.60em;
+font-family: 'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif;
+color: #FFFFFF;
+line-height:1.6em; 
+}
+
+
+/* BUTTON */ 
+
+
+/* PICTURES LEFT */ 
+.picForgotPassword, .picDetailsVisit, .picDetailsQuery {position:relative; margin:auto; margin-top:-20px; float:left; width:100px; height:251px; z-index:2; background: url(detailsPictures01.png);}
+/* PICTURES LEFT */ 
+
+
+/* PICTURES */ 
+.foldMenu {position:relative; margin:auto; margin-top:10px; padding:18px 0px 0px 20px; float:left; width:679px; height:29px; background: url(Graphics/foldMenu.png); border:0px solid}
+
+.windowBlue {position:relative; margin:auto; margin:20px 0px 0px 0px; padding:15px 5px 5px 15px; float:left; width:286px; height:157px; background: url(Graphics/windowBlue.png);}
+.windowPink {position:relative; margin:auto; padding:15px 5px 5px 15px; float:left; width:252px; height:156px; background: url(Graphics/windowPink.png);}
+
+/* PICTURES */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NIE KASOWAÆ */ /* NIE KASOWAÆ */ /* NIE KASOWAÆ */ /* NIE KASOWAÆ */ /* NIE KASOWAÆ */ /* NIE KASOWAÆ */ /* NIE KASOWAÆ */ 
+.page {
+			cursor: pointer;
+			float: left;
+			width:120px; 
+			margin: 2px 2px 2px 2px;
+			height: 23px;
+			display: block;
+			font-size: 0.90em;
+			color: #FFFFFF;
+			font-family: 'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif;
+			background-color: #3399ff;
+			border: 0px;
+			padding: 1px 0px 5px 0px;
+			vertical-align: middle;
+			text-align: super;
+}
+/* NIE KASOWAÆ */ /* NIE KASOWAÆ */ /* NIE KASOWAÆ */ /* NIE KASOWAÆ */ /* NIE KASOWAÆ */ /* NIE KASOWAÆ */ /* NIE KASOWAÆ */ 
+		

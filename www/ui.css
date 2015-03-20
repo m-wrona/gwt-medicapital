@@ -1,0 +1,207 @@
+/*--- ***************************  generic stuff  **********************************************************************---*/
+.iconStar {
+	margin: auto;
+	margin: 6px 5px 0px 0px;
+	float: left;
+	width: 7px;
+	height: 6px;
+	background: url(img/common/iconStar.png);
+}
+
+/*--- ***************************  menu  **********************************************************************---*/
+
+.pageOptionsMenu {
+	position: relative;
+	margin: auto;
+	margin-left: 15px;
+	padding: 0px 5px 5px 0px;
+	float: left;
+	width: 698px;
+	height: 55px;
+	background: url(img/menu/picGroundFold.png);
+}
+
+.cssPageMenuButton {
+	cursor: pointer;
+	float: left;
+	margin: 20px 0px 0px 152px;
+	height: 10px;
+	width: 50px;
+	font-size: 0.65em;
+	color: #FFFFFF;
+	font-family: 'Lucida Grande', 'Tahoma', Arial, Verdana, sans-serif;
+	background-color: none;
+	border: 0px;
+	padding: 5px 0px 5px 0px;
+	vertical-align: middle;
+	text-align: super;
+}
+
+/*--- ***************************  visit form  **********************************************************************---*/
+.visitForm {
+	background: #e3e8f3;
+	padding: 4px 4px 4px 8px;
+	cursor: default;
+	border-bottom: 1px solid #bbbbbb;
+	border-top: 5px solid #d0e4f6;
+	height: 275px;
+	width: 300px;
+}
+
+.visitForm .dialogTopLeft {
+	background: no-repeat -13px 0px;
+	-background: no-repeat -13px 0px;
+}
+
+.visitForm .dialogTopRight {
+	background: no-repeat -18px 0px;
+	-background: no-repeat -18px 0px;
+}
+
+.gwt-DateBox input {
+	background: #ffcccc;
+	width: 8em;
+}
+
+.dateBoxFormatError {
+	background: #ffcccc;
+}
+
+.dateBoxPopup {
+	background: #ffcccc;
+}
+
+
+/************************** menu bar *************************************************************************/
+.gwt-MenuBar {
+  cursor: default;
+}
+
+.gwt-MenuBar .gwt-MenuItem {
+	   margin-top: -20px;
+  cursor: default;
+}
+
+.gwt-MenuBar .gwt-MenuItem-selected {
+  background: #E0EDFE;
+}
+
+
+.gwt-MenuBar-horizontal .gwt-MenuItem {
+	   margin-top: -20px;
+  padding: 0px 10px;
+  vertical-align: bottom;
+  color: #666666;
+  font-weight: bold;
+}
+
+.gwt-MenuBar-horizontal .gwt-MenuItemSeparator {
+  width: 1px;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  border-left: 1px solid #888888;
+  background: white;
+}
+
+.gwt-MenuBar-horizontal .gwt-MenuItemSeparator .menuSeparatorInner {
+  width: 1px;
+  height: 1px;
+  background: white; 
+}
+
+.gwt-MenuBar-vertical {
+  margin-top: 0px;
+  margin-left: 0px;
+  background: white;
+}
+
+.gwt-MenuBar-vertical table {
+  border-collapse: collapse;
+}
+
+.gwt-MenuBar-vertical .gwt-MenuItem {
+	   margin-top: -20px;
+  padding: 4px 14px 4px 1px;
+}
+
+.gwt-MenuBar-vertical .gwt-MenuItemSeparator {
+  padding: 2px 0px;
+}
+
+.gwt-MenuBar-vertical .gwt-MenuItemSeparator .menuSeparatorInner {
+  height: 1px;
+  padding: 0px;
+  border: 0px;
+  border-top: 1px solid #777777;
+  background: #ddddee;
+  overflow: hidden;
+}
+
+.gwt-MenuBar-vertical .subMenuIcon {
+	   margin-top: -20px;
+  padding-right: 4px;
+}
+
+.gwt-MenuBar-vertical .subMenuIcon-selected {
+  background: #FFF;
+}
+
+.gwt-MenuBarPopup {
+  margin: 0px 0px 0px 3px;
+}
+
+
+
+
+.gwt-MenuBarPopup .menuPopupTopLeftInner {
+  width: 5px;
+  height: 5px;
+  zoom: 1;
+}
+
+.gwt-MenuBarPopup .menuPopupTopRightInner {
+  width: 8px;
+  height: 5px;
+  zoom: 1;
+}
+
+.gwt-MenuBarPopup .menuPopupBottomLeftInner {
+  width: 5px;
+  height: 8px;
+  zoom: 1;
+}
+
+.gwt-MenuBarPopup .menuPopupBottomRightInner {
+  width: 8px;
+  height: 8px;
+  zoom: 1;
+}
+
+
+html>body .gwt-MenuBarPopup {
+}
+
+* html .gwt-MenuBarPopup .menuPopupTopLeftInner {
+  width: 5px;
+  height: 5px;
+  overflow: hidden;
+}
+
+* html .gwt-MenuBarPopup .menuPopupTopRightInner {
+  width: 8px;
+  height: 5px;
+  overflow: hidden;
+}
+
+* html .gwt-MenuBarPopup .menuPopupBottomLeftInner {
+  width: 5px;
+  height: 8px;
+  overflow: hidden;
+}
+
+* html .gwt-MenuBarPopup .menuPopupBottomRightInner {
+  width: 8px;
+  height: 8px;
+  overflow: hidden;
+}

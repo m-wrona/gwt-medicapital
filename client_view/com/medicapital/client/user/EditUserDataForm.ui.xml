@@ -1,0 +1,384 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<ui:style>
+		.errorMsg {
+			font-family: 'Helvetica', Arial, 'Tahoma', sans-serif;
+			font-size: 11px;
+			font-weight: bold;
+			color: #ea0600;
+			line-height: 18px;
+		}
+		
+		.successMsg {
+			font-family: 'Helvetica', Arial, 'Tahoma', sans-serif;
+			font-size: 11px;
+			font-weight: bold;
+			color: #009c1a;
+			line-height: 18px;
+		}
+		
+		.buttonSaveData {
+			cursor: pointer;
+			margin-left: 3px;
+			width: 66px;
+			height: 12px;
+			background: url(Graphics/Button/saveData.png);
+			border: 0px;
+		}
+		
+		.buttonCheckLogin {
+			cursor: pointer;
+			margin-left: 3px;
+			width: 176px;
+			height: 18px;
+			background: url(Graphics/Button/checkLogin.png);
+			border: 0px;
+		}
+		
+		.inputRegistrationArea {
+			margin-top: -2px;
+			float: left;
+			width: 188px;
+			padding-left: 3px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			background: #FFF;
+			border: 1px solid #aaaaaa;
+			font-size: 12px;
+		}
+		
+		.inputRegistrationList {
+			margin-top: -2px;
+			float: left;
+			width: 195px;
+			padding-left: 3px;
+			height: 22px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			background: #FFF;
+			border: 1px solid #aaaaaa;
+			font-size: 12px;
+		}
+		
+		.inputRegistrationHobbies {
+			margin-top: 29px;
+			width: 188px;
+			height: 150px;
+			border: 1px solid #aaaaaa;
+			font-size: 12px;
+			background: #FFF;
+		}
+		
+		.inputRegistrationYear {
+			margin-top: 0px;
+			float: left;
+			width: 100px;
+			height: 22px;
+			padding-left: 3px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			background: #FFF;
+			border: 1px solid #aaaaaa;
+			font-size: 12px;
+		}
+		
+		.inputRegistrationDay .inputRegistrationMonth {
+			margin-top: -1px;
+			float: left;
+			width: 57px;
+			height: 22px;
+			padding-left: 3px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			background: #FFF;
+			border: 1px solid #aaaaaa;
+			font-size: 12px;
+		}
+	</ui:style>
+
+	<g:HTMLPanel>
+
+		<table
+			style="padding-top:5px; width:959px; height:auto; border-top:1px dashed #dbdbdb"
+			cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<div class="letterTextNormal">
+						<b>Twój profil</b>
+						zawiera dane o Tobie, wprowadzone podczas rejestracji. Możesz
+						dowolnie edytować informacje o sobie - oprócz nazwy użytkownika
+						(Login). Pamiętaj że częściowy dostęp do Twoich danych, posiada
+						lekarz do którego zarejestrowałeś się na wizytę (zgodnie z
+						regulamine MediCapital ptk 33). Dlatego upewnij się że wprowadzone
+						przez Ciebie informacje są zgodne z rzeczywistością.
+						<br />
+						<b>Lekarz ma prawo anulować spotkanie, w przypadku kiedy dane są
+							nie prawdziwe.</b>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<table style="margin:15px 0px 15px 0px; width:959px; height:auto;"
+			cellpadding="0" cellspacing="0">
+			<tr>
+				<td
+					style="width:9px; height:9px; background:url(Graphics/cornerTopLeft.png)"></td>
+				<td style="width:937px; height:8px; border-top:1px solid #bebebe;"></td>
+				<td
+					style="width:9px; height:9px; background:url(Graphics/cornerTopRight.png)"></td>
+			</tr>
+			<tr>
+				<td colspan="3"
+					style="padding:5px 10px 0px 10px; border-left:1px solid #bebebe; border-right:1px solid #bebebe">
+					<div class="letterTextNormal">
+						<table style="width:937px; background:#f7f7f7" cellpadding="0"
+							cellspacing="0">
+							<tr>
+								<td style="width:312px;" valign="top" border="1">
+									<table style="width:292px" align="center" cellpadding="0"
+										cellspacing="6">
+										<tr>
+											<td colspan="2">
+												<div class="iconBirdBigBlue"></div>
+												<div class="letterTextBlue">Dane do logowania:</div>
+											</td>
+										</tr>
+										<tr>
+											<td style="width:100px; vertical-align:top">Login:</td>
+											<td style="width:192px" align="center">
+												<g:TextBox ui:field="login" enabled='false'
+													addStyleNames='{style.inputRegistrationArea}' />
+												<g:Label ui:field="validationLogin" visible='false'
+													addStyleNames='{style.errorMsg}'>Niepoprawny login</g:Label>
+												<g:Label ui:field="validationLoginExist" visible='false'
+													addStyleNames='{style.errorMsg}'>Podany login jest już zajęty</g:Label>
+												<g:Label ui:field="validationLoginFree" visible='false'
+													addStyleNames='{style.successMsg}'>Login jest dostępny</g:Label>
+											</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td align="center">
+												<g:Button ui:field="buttonCheckLogin"
+													addStyleNames='{style.buttonCheckLogin}'></g:Button>
+											</td>
+										</tr>
+										<tr>
+											<td style="width:100px; vertical-align:top">E-mail:</td>
+											<td style="width:192px" align="center">
+												<g:TextBox ui:field="eMail"
+													addStyleNames='{style.inputRegistrationArea}' />
+												<g:Label ui:field="validationEmail" visible='false'
+													addStyleNames='{style.errorMsg}'>Nieprawidłowy adres E-mail</g:Label>
+											</td>
+										</tr>
+										<tr>
+											<g:HTMLPanel ui:field="passwordPanel">
+												<td style="width:100px; vertical-align:top">Hasło</td>
+												<td style="width:192px;">
+													<g:Label ui:field="passwordInfo" visible='true'
+														addStyleNames='{style.successMsg}'>Hasło tymczasowe zostanie wygenerowane
+														automatycznie i wysłane na podany e-mail</g:Label>
+													<g:PasswordTextBox ui:field="password"
+														addStyleNames='{style.inputRegistrationArea}' />
+													<g:PasswordTextBox ui:field="password2"
+														addStyleNames='{style.inputRegistrationArea}' />
+													<g:Label ui:field="validationPassword" visible='false'
+														addStyleNames='{style.errorMsg}'>Hasło i jego powtórzenie musza być takie
+														same i nie mogą być puste</g:Label>
+												</td>
+											</g:HTMLPanel>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<div class="helpPictures01"></div>
+												<div class="empty"
+													style="margin:-8px 0px 0px 0px; padding:5px; width:281px; border:1px solid #e1e1e1; background:#FFF">
+													<div class="empty"
+														style="padding:5px; width:269px; background:#e3e8f1; border:1px solid #c9d4e7">
+														<div class="letterTextHelp">
+															Aby zmienić swoje dane, najedź kursorem na
+															informację którą
+															chcesz zmienić i kliknij dwa razy.
+															Wybrane
+															pole zmieni się
+															na aktywne, umożliwiając
+															wprowadzenie
+															zmian.
+										 				</div>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td style="width:1px; background:#dbdbdb"></td>
+								<td style="width:312px" valign="top">
+									<table style="width:292px" align="center" cellpadding="0"
+										cellspacing="6">
+										<tr>
+											<td colspan="2">
+												<div class="iconBirdBigBlue"></div>
+												<div class="letterTextBlue">Informacje o Tobie:</div>
+											</td>
+										</tr>
+										<tr>
+											<td style="width:100px; vertical-align:top">Imię:</td>
+											<td style="width:192px" align="center">
+												<g:TextBox ui:field="firstName"
+													addStyleNames='{style.inputRegistrationArea}' />
+												<g:Label ui:field="validationFirstName" visible='false'
+													addStyleNames='{style.errorMsg}'>Uzupełnij pole</g:Label>
+											</td>
+										</tr>
+										<tr>
+											<td style="vertical-align:top">Nazwisko:</td>
+											<td>
+												<g:TextBox ui:field="lastName"
+													addStyleNames='{style.inputRegistrationArea}' />
+												<g:Label ui:field="validationLastName" visible='false'
+													addStyleNames='{style.errorMsg}'>Uzupełnij pole</g:Label>
+											</td>
+										</tr>
+										<tr>
+											<td style="vertical-align:top">Płeć:</td>
+											<td>
+												<g:ListBox ui:field="sex"
+													addStyleNames='{style.inputRegistrationList}' />
+												<g:Label ui:field="validationSex" visible='false'
+													addStyleNames='{style.errorMsg}'>Nie zaznaczono</g:Label>
+											</td>
+										</tr>
+										<tr>
+											<td style="vertical-align:top">Urodzony/a:</td>
+											<td>
+												<div class="empty">
+													<g:ListBox ui:field="day"
+														addStyleNames='{style.inputRegistrationDay}' />
+												</div>
+												<div class="empty" style="margin-left:4px">
+													<g:ListBox ui:field="month"
+														addStyleNames='{style.inputRegistrationMonth}' />
+												</div>
+												<div class="empty" style="margin-left:4px">
+													<g:ListBox ui:field="year"
+														addStyleNames='{style.inputRegistrationYear}' />
+												</div>
+												<g:Label ui:field="validationBirth" visible='false'
+													addStyleNames='{style.errorMsg}'>Uzupełnij pole</g:Label>
+											</td>
+										</tr>
+										<tr>
+											<td style="vertical-align:top">Pesel:</td>
+											<td>
+												<g:TextBox ui:field="personalId"
+													addStyleNames='{style.inputRegistrationArea}' />
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<div class="iconBirdBigBlue"></div>
+												<div class="letterTextBlue">Dane zamieszkania, kontaktowe:</div>
+											</td>
+										</tr>
+										<tr>
+											<td style="vertical-align:top">Dane adresowe:</td>
+											<td>
+												<g:Label ui:field="localizationInfo" addStyleNames='{style.inputRegistrationArea}'>Proszę
+													wypełnić wszystkie dane adresowe lub pozostawić puste</g:Label>
+												<g:Label ui:field="validationLocalization" visible='false'
+													addStyleNames='{style.errorMsg}'>Wszystkie dane adresowe muszą być puste lub
+													wypełnione</g:Label>
+											</td>
+										</tr>
+										<tr>
+											<td style="vertical-align:top">Ulica:</td>
+											<td>
+												<g:TextBox ui:field="address"
+													addStyleNames='{style.inputRegistrationArea}' />
+												<g:Label ui:field="validationAddress" visible='false'
+													addStyleNames='{style.errorMsg}'>Adres nie może być pusty</g:Label>
+											</td>
+										</tr>
+										<tr>
+											<td style="vertical-align:top">Kod pocztowy</td>
+											<td>
+												<g:TextBox ui:field="postalCode"
+													addStyleNames='{style.inputRegistrationArea}' />
+												<g:Label ui:field="validationPostalCode" visible='false'
+													addStyleNames='{style.errorMsg}'>Kod pocztowy nie może być pusty</g:Label>
+											</td>
+										</tr>
+										<tr>
+											<td style="vertical-align:top">Województwo:</td>
+											<td>
+												<g:ListBox ui:field="regions"
+													addStyleNames='{style.inputRegistrationList}' />
+											</td>
+										</tr>
+										<tr>
+											<td style="vertical-align:top">Miasto:</td>
+											<td>
+												<g:ListBox ui:field="cities"
+													addStyleNames='{style.inputRegistrationList}' />
+												<g:Label ui:field="validationCity" visible='false'
+													addStyleNames='{style.errorMsg}'>Nie zaznaczono</g:Label>
+											</td>
+										</tr>
+										<tr>
+											<td style="vertical-align:top">Telefon:</td>
+											<td>
+												<g:TextBox ui:field="phoneNumber"
+													addStyleNames='{style.inputRegistrationArea}' />
+											</td>
+										</tr>
+										<tr>
+											<td style="vertical-align:top">Telefon kom.:</td>
+											<td>
+												<g:TextBox ui:field="mobile"
+													addStyleNames='{style.inputRegistrationArea}' />
+											</td>
+										</tr>
+									</table>
+								</td>
+								<td style="width:1px; background:#dbdbdb"></td>
+								<td style="width:311px" valign="top">
+									<table style="width:291px" valign="center" cellpadding="0"
+										cellspacing="6" border="0">
+										<tr>
+											<td style="width:100px">Zainteresowania</td>
+											<td style="width:191px">
+												<g:ScrollPanel ui:field="panelHobbies"
+													addStyleNames='{style.inputRegistrationHobbies}' />
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2" align="right">
+												<g:PushButton ui:field="buttonSave"
+													addStyleNames='{style.buttonSaveData}' />
+
+												<g:Button ui:field="buttonDelete" visible='false'>Skasuj
+							</g:Button>
+												<g:Button ui:field="buttonClose" visible='false'>Zamknij
+							</g:Button>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style="width:9px; height:9px; background:url(Graphics/cornerBottomLeft.png)"></td>
+				<td style="width:937px; height:8px; border-bottom:1px solid #bebebe;"></td>
+				<td
+					style="width:9px; height:9px; background:url(Graphics/cornerBottomRight.png)"></td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+
+</ui:UiBinder>

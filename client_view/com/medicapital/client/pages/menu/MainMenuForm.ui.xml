@@ -1,0 +1,14 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<g:HorizontalPanel>
+		<g:MenuBar autoOpen="true" animationEnabled="true">
+			<g:MenuItem ui:field="mainPage" text="Strona główna" />
+			<g:MenuItem ui:field="offer" text="Oferta" />
+			<g:MenuItem ui:field="regulation" text="Regulamin" />
+			<g:MenuItem ui:field="help" text="Pomoc" />
+			<g:MenuItem ui:field="contact" text="Kontakt" />
+		</g:MenuBar>
+	</g:HorizontalPanel>
+
+</ui:UiBinder>

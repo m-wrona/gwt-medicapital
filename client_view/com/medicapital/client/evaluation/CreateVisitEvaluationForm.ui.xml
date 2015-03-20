@@ -1,0 +1,148 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' 
+	xmlns:m='urn:import:com.google.gwt.maps.client'
+	xmlns:e='urn:import:com.medicapital.client.ui.generic'
+	>
+
+
+	<ui:style>
+	
+	.inputVisitDetailsBorder {
+			margin-top: 1px;
+			float: left;
+			width: 246px;
+			padding-left: 3px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			font-size: 0.75em;
+			font-weight: bold;
+			background-color: #FFF;
+			border: 1px solid #aaaaaa;
+		}
+		
+		.inputVisitDetailsNoBorder {
+			margin-top: 1px;
+			float: left;
+			width: 246px;
+			padding-left: 3px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			font-size: 0.75em;
+			font-weight: bold;
+			background-color: #FFF;
+			border: 0px;
+		}
+		
+		.textareaVisitDetails {
+			margin-top: 1px;
+			float: left;
+			width: 246px;
+			height: 110px;
+			padding-left: 3px;
+			color: #565656;
+			font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			font-size: 0.75em;
+			background-color: #FFF;
+			border: 1px solid #aaaaaa;
+		}
+		.buttonClose {
+			cursor: pointer;
+			float: right;
+			width: 3px;
+			height: 7px;
+			background: url(Graphics/Button/close.png);
+			border: 0px;
+		}
+		
+		.pagePanel {
+			width: 969px;
+			height: 500px;
+		}
+		
+		.textArea {
+			width: 300px;
+			height: 100px;
+		}
+		
+		.pageButton {
+			cursor: pointer;
+			float: left;
+			margin: 2px 2px 2px 2px;
+			height: 20px;
+			font-size: 0.65em;
+			color: black;
+				font-family: 'Helvetica', 'Arial', 'Tahoma', 'sans-serif';
+			background-color: #699c06;
+			border: 0px;
+			padding: 3px 0px 5px 0px;
+			vertical-align: middle;
+			text-align: super;
+		}
+	</ui:style>
+		<g:HTMLPanel>
+		<div class="empty">
+			<div class="detailsPictures01"></div>
+			<div class="empty" style="margin-left:-20px; width:366px;">
+				<div class="cornerTopLeft"></div>
+				<div class="cornerTopMiddle" style="width:340px"></div>
+				<div class="cornerTopRight"></div>
+				<div class="cornerMiddleSmallLeft" style="height:310px"></div>
+				<div class="empty"
+					style="padding:8px 10px 0px 10px; margin-top:-6px; width:332px; background:#FFF">
+					ds
+					<div class="empty">
+						<div class="letterTitleBig">
+							<div class="iconBirdBigBlue"></div>
+							Twoja opinia / Komentarz do wizyty
+						</div>
+					</div>
+					<div class="letterTextNormal">
+						<div class="empty"
+							style="width:100%; padding-bottom:5px; border-bottom:1px dotted #aeaeae">
+
+							<div class="empty" style="width:79px">Data wystawienia:</div>
+							<div class="empty">
+								<g:TextBox ui:field="evaluationDate" addStyleNames='{style.inputVisitDetailsNoBorder}' />
+							</div>
+
+							<br />
+						</div>
+						<div class="empty"
+							style="margin-top:5px; padding-top:5px; width:100%;  border-top:1px dotted #aeaeae">
+							Imię i nazwisko lekarza:
+							<b>
+								<g:Hyperlink ui:field="doctor" />
+							</b>
+							<br />
+							Ocena:
+							<b>
+								<e:RatingForm ui:field="evaluation"/>
+							</b>
+							<br />
+						</div>
+						<div class="empty" style="margin-top:8px; width:100%">
+							<b>Tytuł:</b>
+							<g:TextBox ui:field="title" />
+							<br />
+							<g:Label ui:field="validationTitle" visible='false'>Tytuł nie
+								może być pusty</g:Label>
+							<g:TextArea ui:field="description" addStyleNames='{style.textArea}' />
+							<g:PushButton ui:field="buttonCloseWindow" addStyleNames='{style.pageButton}'>
+								Zamknij
+										</g:PushButton>
+							<g:PushButton ui:field="buttonSave" addStyleNames='{style.pageButton}'>Zapisz
+							</g:PushButton>
+
+						</div>
+					</div>
+					<div class="cornerMiddleSmallRight" style="height:310px"></div>
+					<div class="empty" style="margin-top:-6px">
+						<div class="cornerBottomLeft"></div>
+						<div class="cornerBottomMiddle" style="width:340px"></div>
+						<div class="cornerBottomRight"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+			</g:HTMLPanel>
+</ui:UiBinder>
